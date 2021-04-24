@@ -1,10 +1,5 @@
-function component() {
-  const element = document.createElement("div");
+import { three } from "./three";
+import './styles/main.scss'
 
-  // Lodash, currently included via a script, is required for this line to work
-  element.innerHTML = _.join(["Hello", "webpack"], " ");
 
-  return element;
-}
-
-document.body.appendChild(component());
+document.querySelector('h1').textContent = three(`What's up!`);
