@@ -1,9 +1,10 @@
 import "./styles/main.scss"
 import "./styles/style.css";
+import gsap from "gsap";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
-import * as dat from "dat.gui";
+// import * as dat from "dat.gui";
 
 // Loading
 
@@ -16,7 +17,7 @@ const star = textureLoader.load("./star.png");
 // const normalTexture = textureLoader.load("");
 
 // Debug
-const gui = new dat.GUI();
+// const gui = new dat.GUI();
 
 // Canvas
 const canvas = document.querySelector("canvas.webgl");
@@ -63,6 +64,8 @@ const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
 scene.add(sphere, particlesMesh);
 
 // 3D Models
+
+
 let moon;
 loader.load(
   "/models/moon.glb",
@@ -70,10 +73,10 @@ loader.load(
     moon = gltf.scene;
     moon.rotation.y = -0.3;
     moon.rotation.x = -0.1;
-
+   
     moon.position.y = -0.1;
     moon.position.x = -0.1;
-
+    
     gltf.scene.scale.set(1.15, 1.15, 1.15);
     scene.add(gltf.scene);
   },
@@ -85,42 +88,42 @@ loader.load(
 
 // Light 1
 
-const pointLight1 = new THREE.PointLight(0x190039, 0.5);
-pointLight1.position.x = 2;
-pointLight1.position.y = -1;
-pointLight1.position.z = -1;
-scene.add(pointLight1);
+// const pointLight1 = new THREE.PointLight(0x190039, 0.5);
+// pointLight1.position.x = 2;
+// pointLight1.position.y = -1;
+// pointLight1.position.z = -1;
+// scene.add(pointLight1);
 
-// Light 2
+// // Light 2
 
-const pointLight2 = new THREE.PointLight(0x350061, 1);
+// const pointLight2 = new THREE.PointLight(0x350061, 1);
 
-pointLight2.position.set(8, 1, -8);
-pointLight2.intensity = 1;
+// pointLight2.position.set(8, 1, -8);
+// pointLight2.intensity = 1;
 
-scene.add(pointLight2);
+// scene.add(pointLight2);
 
-const light2 = gui.addFolder("Light 2");
+// const light2 = gui.addFolder("Light 2");
 
-light2.add(pointLight2.position, "x").min(-3).max(3).step(0.01);
-light2.add(pointLight2.position, "y").min(-6).max(6).step(0.01);
-light2.add(pointLight2.position, "z").min(-6).max(6).step(0.01);
-light2.add(pointLight2, "intensity").min(0).max(10).step(0.01);
+// light2.add(pointLight2.position, "x").min(-3).max(3).step(0.01);
+// light2.add(pointLight2.position, "y").min(-6).max(6).step(0.01);
+// light2.add(pointLight2.position, "z").min(-6).max(6).step(0.01);
+// light2.add(pointLight2, "intensity").min(0).max(10).step(0.01);
 
 // Light 3
-const pointLight3 = new THREE.DirectionalLight(0x350061, 0.3);
+const pointLight3 = new THREE.PointLight(0x7d26cd, 0.5);
 
 pointLight3.position.set(8, 0.36, 10);
-pointLight3.intensity = 5;
+pointLight3.intensity = 2;
 
 scene.add(pointLight3);
 
-const light3 = gui.addFolder("Light 3");
+// const light3 = gui.addFolder("Light 3");
 
-light3.add(pointLight3.position, "x").min(-8).max(8).step(0.01);
-light3.add(pointLight3.position, "y").min(-8).max(8).step(0.01);
-light3.add(pointLight3.position, "z").min(-3).max(3).step(0.01);
-light3.add(pointLight3, "intensity").min(0).max(10).step(0.01);
+// light3.add(pointLight3.position, "x").min(-8).max(8).step(0.01);
+// light3.add(pointLight3.position, "y").min(-8).max(8).step(0.01);
+// light3.add(pointLight3.position, "z").min(-3).max(3).step(0.01);
+// light3.add(pointLight3, "intensity").min(0).max(10).step(0.01);
 
 const pointLight4 = new THREE.DirectionalLight(0x350061, 0.5);
 
@@ -129,36 +132,36 @@ pointLight4.intensity = 1;
 
 scene.add(pointLight4);
 
-const light4 = gui.addFolder("Light 4");
+// const light4 = gui.addFolder("Light 4");
 
-light4.add(pointLight4.position, "x").min(-3).max(3).step(0.01);
-light4.add(pointLight4.position, "y").min(-6).max(6).step(0.01);
-light4.add(pointLight4.position, "z").min(-6).max(6).step(0.01);
-light4.add(pointLight4, "intensity").min(0).max(10).step(0.01);
+// light4.add(pointLight4.position, "x").min(-3).max(3).step(0.01);
+// light4.add(pointLight4.position, "y").min(-6).max(6).step(0.01);
+// light4.add(pointLight4.position, "z").min(-6).max(6).step(0.01);
+// light4.add(pointLight4, "intensity").min(0).max(10).step(0.01);
 
 const light2Color = {
   color: 0x400061,
 };
 
-light2.addColor(light2Color, "color").onChange(() => {
-  pointLight2.color.set(light1Color.color);
-});
+// light2.addColor(light2Color, "color").onChange(() => {
+//   pointLight2.color.set(light1Color.color);
+// });
 
 const light3Color = {
   color: 0xfffff,
 };
 
-light3.addColor(light3Color, "color").onChange(() => {
-  pointLight3.color.set(light3Color.color);
-});
+// light3.addColor(light3Color, "color").onChange(() => {
+//   pointLight3.color.set(light3Color.color);
+// });
 
 const light4Color = {
   color: 0xfffff,
 };
 
-light4.addColor(light4Color, "color").onChange(() => {
-  pointLight4.color.set(light4Color.color);
-});
+// light4.addColor(light4Color, "color").onChange(() => {
+//   pointLight4.color.set(light4Color.color);
+// });
 
 // const pointLightHelper = new THREE.PointLightHelper(pointLight2, 1);
 
@@ -250,6 +253,7 @@ const tick = () => {
   sphere.rotation.x = 0.5 * elapsedTime;
   sphere.rotation.z = 0.5 * elapsedTime;
 
+  
   particlesMesh.rotation.x = mouseX * (elapsedTime * -0.00003);
   particlesMesh.rotation.y = mouseY * (elapsedTime * -0.00005);
 
@@ -264,4 +268,5 @@ const tick = () => {
 };
 
 tick();
+
 
