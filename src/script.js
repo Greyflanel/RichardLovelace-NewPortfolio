@@ -1,5 +1,5 @@
-import "./styles/main.scss"
-import "./styles/style.css";
+import "/css/main.css";
+// import "./styles/style.css";
 import gsap from "gsap";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
@@ -17,7 +17,7 @@ const star = textureLoader.load("./star.png");
 // const normalTexture = textureLoader.load("");
 
 // Debug
-// const gui = new dat.GUI();
+//  const gui = new dat.GUI();
 
 // Canvas
 const canvas = document.querySelector("canvas.webgl");
@@ -30,14 +30,14 @@ const geometry = new THREE.SphereGeometry(0.001, 64, 64);
 
 const particlesGeometry = new THREE.BufferGeometry();
 
-const particlesCount = 12000;
+const particlesCount = 15000;
 
 const posArray = new Float32Array(particlesCount * 3);
 
 for (let i = 0; i < particlesCount * 3; i++) {
   // posArray[i] = Math.random()
   // posArray[i] = Math.random() - 0.5
-  posArray[i] = (Math.random() - 0.5) * 8;
+  posArray[i] = (Math.random() - 0.5) * 6;
 }
 // // Materials
 
@@ -51,7 +51,7 @@ const material = new THREE.PointsMaterial({
 });
 
 const particlesMaterial = new THREE.PointsMaterial({
-  size: 0.05,
+  size: 0.04,
   map: star,
   transparent: true,
   color: "#ffffff",
@@ -72,12 +72,12 @@ loader.load(
   function (gltf) {
     moon = gltf.scene;
     moon.rotation.y = -0.3;
-    moon.rotation.x = -0.1;
+    moon.rotation.x = -0.15;
    
     moon.position.y = -0.1;
     moon.position.x = -0.1;
     
-    gltf.scene.scale.set(1.15, 1.15, 1.15);
+    gltf.scene.scale.set(1.2, 1.2, 1.2);
     scene.add(gltf.scene);
   },
   undefined,
@@ -96,12 +96,12 @@ loader.load(
 
 // // Light 2
 
-// const pointLight2 = new THREE.PointLight(0x350061, 1);
+const pointLight2 = new THREE.PointLight(0x350061, 1);
 
-// pointLight2.position.set(8, 1, -8);
-// pointLight2.intensity = 1;
+pointLight2.position.set(-3, -6, 3.16);
+pointLight2.intensity = 1;
 
-// scene.add(pointLight2);
+scene.add(pointLight2);
 
 // const light2 = gui.addFolder("Light 2");
 
@@ -113,8 +113,8 @@ loader.load(
 // Light 3
 const pointLight3 = new THREE.PointLight(0x7d26cd, 0.5);
 
-pointLight3.position.set(8, 0.36, 10);
-pointLight3.intensity = 2;
+pointLight3.position.set(-8, 3.15, 10);
+pointLight3.intensity = 1.8;
 
 scene.add(pointLight3);
 
@@ -125,12 +125,12 @@ scene.add(pointLight3);
 // light3.add(pointLight3.position, "z").min(-3).max(3).step(0.01);
 // light3.add(pointLight3, "intensity").min(0).max(10).step(0.01);
 
-const pointLight4 = new THREE.DirectionalLight(0x350061, 0.5);
+// const pointLight4 = new THREE.DirectionalLight(0x350061, 0.5);
 
-pointLight4.position.set(10, 10, -10.5);
-pointLight4.intensity = 1;
+// pointLight4.position.set(10, 10, -10.5);
+// pointLight4.intensity = 1;
 
-scene.add(pointLight4);
+// scene.add(pointLight4);
 
 // const light4 = gui.addFolder("Light 4");
 
@@ -139,25 +139,25 @@ scene.add(pointLight4);
 // light4.add(pointLight4.position, "z").min(-6).max(6).step(0.01);
 // light4.add(pointLight4, "intensity").min(0).max(10).step(0.01);
 
-const light2Color = {
-  color: 0x400061,
-};
+// const light2Color = {
+//   color: 0x400061,
+// };
 
 // light2.addColor(light2Color, "color").onChange(() => {
 //   pointLight2.color.set(light1Color.color);
 // });
 
-const light3Color = {
-  color: 0xfffff,
-};
+// const light3Color = {
+//   color: 0xfffff,
+// };
 
 // light3.addColor(light3Color, "color").onChange(() => {
 //   pointLight3.color.set(light3Color.color);
 // });
 
-const light4Color = {
-  color: 0xfffff,
-};
+// const light4Color = {
+//   color: 0xfffff,
+// };
 
 // light4.addColor(light4Color, "color").onChange(() => {
 //   pointLight4.color.set(light4Color.color);

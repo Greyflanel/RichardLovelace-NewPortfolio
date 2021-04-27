@@ -3,4 +3,52 @@ section {
   width: 100%;
   position: relative;
 }
+
+.content {
+  position: absolute;
+  top: 20%;
+  text-align: center;
+  z-index: 12;
+  visibility: hidden;
+  color: #0a0111;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-shadow: 0 0 0.5px white, 0 0 1px white, 0 0 3px white, 0 0 7px #2c032c, 0 0 9px #360336;
+}
+
+.content-name {
+  margin: 0;
+  font-size: 5.2rem;
+}
+
+@media (max-width: 1280px) {
+  .content-name {
+    font-size: 4.5rem;
+    margin-top: -15%;
+  }
+}
+
+@media (max-width: 600px) {
+  .content-name {
+    font-size: 4rem;
+  }
+}
+
+.content-title {
+  margin: 0;
+  font-size: 3.5rem;
+}
+
+@media (max-width: 1280px) {
+  .content-title {
+    font-size: 3rem;
+    margin-top: 1%;
+  }
+}
+
+@media (max-width: 600px) {
+  .content-title {
+    margin-top: 75%;
+    font-size: 2.7rem;
+  }
+}
 /*# sourceMappingURL=main.css.map */

@@ -1,5 +1,5 @@
 import gsap from "gsap";
-import "./styles/main.scss"
+import "./styles/style.css"
 
 var mqls = [
   window.matchMedia("(min-width: 1281px)"),
@@ -33,23 +33,23 @@ window.onload = function () {
     
     tl3.set(".content", {
       x: "130%",
-      y: "170%",
+      y: "180%",
       filter: "brightness(110%)",
       opacity: 1,
     });
     tl2
       .set(letters, {
         visibility: "visible",
-        opacity: 0
+        opacity: 0,
       })
       .to(letters, {
         
         duration: 4,
         opacity: 1,
-        filter: "brightness(140%)",
+        filter: "brightness(120%)",
         stagger: {
           from: "center",
-          each: 0.03,
+          each: 0.039,
           repeat: 1,
         },
       }, "+=1")
@@ -58,7 +58,7 @@ window.onload = function () {
         filter: "brightness(0%)",
         stagger: {
           from: "center",
-          each: 0.03,
+          each: 0.039,
           repeat: 10,
           yoyo: true,
           
