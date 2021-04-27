@@ -8,6 +8,8 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 
 // Loading
 
+
+
 const loader = new GLTFLoader();
 
 const textureLoader = new THREE.TextureLoader();
@@ -72,13 +74,13 @@ loader.load(
   function (gltf) {
     moon = gltf.scene;
     moon.rotation.y = -0.3;
-    moon.rotation.x = -0.15;
+    moon.rotation.x = -0.18;
    
     moon.position.y = -0.12;
     moon.position.x = -0.12;
     
     
-    gltf.scene.scale.set(1.2, 1.2, 1.2);
+    gltf.scene.scale.set(1.15, 1.15, 1.15);
     scene.add(gltf.scene);
   },
   undefined,
@@ -100,7 +102,7 @@ loader.load(
 const pointLight2 = new THREE.PointLight(0x350061, 1);
 
 pointLight2.position.set(-3, -6, 3.16);
-pointLight2.intensity = 1;
+pointLight2.intensity = 0.5;
 
 scene.add(pointLight2);
 

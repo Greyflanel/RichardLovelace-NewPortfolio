@@ -1,13 +1,13 @@
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const MiniCSSExtractPlugin = require('mini-css-extract-plugin')
-const path = require('path')
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
+const ImageminWebpWebpackPlugin = require("imagemin-webp-webpack-plugin");
+const path = require('path');
 
 module.exports = {
   entry: {
     index: "./src/index.js",
     script: "./src/script.js",
-    
   },
   output: {
     filename: "bundler.[contenthash].js",
@@ -15,6 +15,12 @@ module.exports = {
   },
   devtool: "source-map",
   plugins: [
+    new ImageminWebpWebpackPlugin({
+      detailedLogs: true,
+      overrideExtension: true,
+      silent: false,
+      strict: true,
+    }),
     new CopyWebpackPlugin({
       patterns: [{ from: path.resolve(__dirname, "../static") }],
     }),
@@ -23,8 +29,8 @@ module.exports = {
       minify: true,
     }),
     new MiniCSSExtractPlugin({
-        filename: "[name].css",
-        chunkFilename: "[id].css"
+      filename: "[name].css",
+      chunkFilename: "[id].css",
     }),
   ],
   module: {
@@ -47,7 +53,7 @@ module.exports = {
         test: /\.css$/,
         use: [MiniCSSExtractPlugin.loader, "css-loader"],
       },
-    //   Sass/Scss
+      //   Sass/Scss
       {
         test: /\.s[ac]ss$/i,
         use: [
@@ -73,20 +79,18 @@ module.exports = {
         ],
       },
 
-    //   3D Model glb
-    {
+      //   3D Model glb
+      {
         test: /\.(glb|gltf)$/,
-                use:
-                [
-                    {
-                        loader: 'file-loader',
-                        options:
-                        {
-                            outputPath: 'assets/models/'
-                        }
-                    }
-                ]
-    },
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              outputPath: "assets/models/",
+            },
+          },
+        ],
+      },
 
       // Fonts
       {
