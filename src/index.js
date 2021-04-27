@@ -22,7 +22,7 @@ window.onload = function () {
     let tl2 = gsap.timeline({ repeat: 0, repeatDelay: 3});
     let tl3 = gsap.timeline({ repeat: 0, });
     let tl4 = gsap.timeline({ repeat: 0 });
-    let tl5 = gsap.timeline({ repeat: 5 });
+    let tl5 = gsap.timeline({ repeat: 0 });
     
 
     
@@ -37,7 +37,7 @@ window.onload = function () {
       filter: "brightness(110%)",
       opacity: 1,
       
-    }, "-=1").to(".content", {
+    }, "-=1.85").to(".content", {
       scale: 1,
       duration: 6,
       
@@ -55,24 +55,24 @@ window.onload = function () {
         stagger: {
           from: "center",
           each: 0.039,
-          repeat: 1,
+          repeat: 0,
         },
-      }, "-=0.5")
+      }, "-=0.8")
       .to(letters, {
         
         filter: "brightness(0%)",
         stagger: {
           from: "edges",
           each: 0.039,
-          repeat: 10,
+          repeat: 7,
           yoyo: true,
           
           
         },
-      }, "-=2.5").to(letters, {
+      }, "-=1").to(letters, {
         filter: "brightness(100%)",
-        delay: 1,
-      });
+        
+      }, "-=0.01");
       
     
     
