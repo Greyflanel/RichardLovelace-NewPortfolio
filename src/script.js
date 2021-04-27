@@ -74,8 +74,9 @@ loader.load(
     moon.rotation.y = -0.3;
     moon.rotation.x = -0.15;
    
-    moon.position.y = -0.1;
-    moon.position.x = -0.1;
+    moon.position.y = -0.12;
+    moon.position.x = -0.12;
+    
     
     gltf.scene.scale.set(1.2, 1.2, 1.2);
     scene.add(gltf.scene);
@@ -114,7 +115,7 @@ scene.add(pointLight2);
 const pointLight3 = new THREE.PointLight(0x7d26cd, 0.5);
 
 pointLight3.position.set(-8, 3.15, 10);
-pointLight3.intensity = 1.8;
+pointLight3.intensity = 3.5;
 
 scene.add(pointLight3);
 

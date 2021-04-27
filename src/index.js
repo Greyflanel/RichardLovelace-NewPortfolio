@@ -1,6 +1,6 @@
 import gsap from "gsap";
 import "./styles/style.css"
-
+import "./nav";
 var mqls = [
   window.matchMedia("(min-width: 1281px)"),
   window.matchMedia("(min-width: 1000px)"),
@@ -20,7 +20,7 @@ window.onload = function () {
   function mediaqueryresponse(mql) {
     let tl = gsap.timeline({ repeat: -1 });
     let tl2 = gsap.timeline({ repeat: 0, repeatDelay: 3});
-    let tl3 = gsap.timeline({ repeat: -1, });
+    let tl3 = gsap.timeline({ repeat: 0, });
     let tl4 = gsap.timeline({ repeat: 0 });
     let tl5 = gsap.timeline({ repeat: 5 });
     
@@ -32,10 +32,15 @@ window.onload = function () {
       
     
     tl3.set(".content", {
-      x: "130%",
+      x: "120%",
       y: "180%",
       filter: "brightness(110%)",
       opacity: 1,
+      
+    }, "-=1").to(".content", {
+      scale: 1,
+      duration: 6,
+      
     });
     tl2
       .set(letters, {
@@ -46,26 +51,27 @@ window.onload = function () {
         
         duration: 4,
         opacity: 1,
-        filter: "brightness(120%)",
+        filter: "brightness(110%)",
         stagger: {
           from: "center",
           each: 0.039,
           repeat: 1,
         },
-      }, "+=1")
+      }, "-=0.5")
       .to(letters, {
         
         filter: "brightness(0%)",
         stagger: {
-          from: "center",
+          from: "edges",
           each: 0.039,
           repeat: 10,
           yoyo: true,
           
+          
         },
-      }, "-=2").to(letters, {
+      }, "-=2.5").to(letters, {
         filter: "brightness(100%)",
-        rotation: "+=90"
+        delay: 1,
       });
       
     
