@@ -19,7 +19,7 @@ window.addEventListener('resize', () => {
 window.onload = function () {
   function mediaqueryresponse(mql) {
     let tl = gsap.timeline({ repeat: -1 });
-    let tl2 = gsap.timeline({ repeat: 0, repeatDelay: 3});
+    let tl2 = gsap.timeline({ repeat: 0, delay: 0.5});
     let tl3 = gsap.timeline({ repeat: 0, });
     let tl4 = gsap.timeline({ repeat: 0 });
     let tl5 = gsap.timeline({ repeat: 0 });
@@ -30,18 +30,15 @@ window.onload = function () {
      
     let letters = document.querySelectorAll(".letter");
       
-    
     tl3.set(".content", {
-      x: "120%",
-      y: "180%",
+      
       filter: "brightness(110%)",
       opacity: 1,
       
-    }, "-=1.85").to(".content", {
-      scale: 1,
-      duration: 6,
+    }, "-=1").to(".content", {
+      duration: 10,
       
-    });
+    }, "-=2");
     tl2
       .set(letters, {
         visibility: "visible",
@@ -54,7 +51,7 @@ window.onload = function () {
         filter: "brightness(110%)",
         stagger: {
           from: "center",
-          each: 0.039,
+          each: 0.042,
           repeat: 0,
         },
       }, "-=0.8")
@@ -63,8 +60,8 @@ window.onload = function () {
         filter: "brightness(0%)",
         stagger: {
           from: "edges",
-          each: 0.039,
-          repeat: 7,
+          each: 0.05,
+          repeat: 9,
           yoyo: true,
           
           
@@ -72,9 +69,9 @@ window.onload = function () {
       }, "-=1").to(letters, {
         filter: "brightness(100%)",
         
-      }, "-=0.01");
+      }, "+=2");
       
-    
+  }
     
     // tl.set(".container", {
     //   visibility: "visible",
@@ -291,7 +288,7 @@ window.onload = function () {
     //       ease: "linear",
     //     });
     // }
-  }
+  
 
   for (let i = 0; i < mqls.length; i++) {
     mediaqueryresponse(mqls[i]);
