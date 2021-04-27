@@ -64,7 +64,7 @@ window.onload = function () {
         stagger: {
           from: "edges",
           each: 0.039,
-          repeat: 7,
+          repeat: 5,
           yoyo: true,
           
           
