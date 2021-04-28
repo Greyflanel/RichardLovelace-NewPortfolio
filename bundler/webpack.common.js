@@ -1,7 +1,6 @@
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
-const ImageminWebpWebpackPlugin = require("imagemin-webp-webpack-plugin");
 const path = require('path');
 
 module.exports = {
@@ -12,15 +11,11 @@ module.exports = {
   output: {
     filename: "bundler.[contenthash].js",
     path: path.resolve(__dirname, "../dist"),
+    clean: true
   },
   devtool: "source-map",
   plugins: [
-    new ImageminWebpWebpackPlugin({
-      detailedLogs: true,
-      overrideExtension: true,
-      silent: false,
-      strict: true,
-    }),
+    
     new CopyWebpackPlugin({
       patterns: [{ from: path.resolve(__dirname, "../static") }],
     }),
@@ -68,7 +63,7 @@ module.exports = {
 
       // Images
       {
-        test: /\.(jpg|png|gif|svg)$/,
+        test: /\.(jpg|png|gif|svg|webp)$/,
         use: [
           {
             loader: "file-loader",

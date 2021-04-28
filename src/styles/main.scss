@@ -2,9 +2,13 @@
 
 $bg: chartreuse;
 
+ html,body {
+width: 100vw;
+overflow-x: hidden;
+}
 section {
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     position: relative;
 }
 
