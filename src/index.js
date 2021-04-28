@@ -46,15 +46,11 @@ window.onload = function () {
       })
       .to(letters, {
         
-        duration: 4,
+        duration: 2,
         opacity: 1,
         filter: "brightness(110%)",
-        stagger: {
-          from: "center",
-          each: 0.042,
-          repeat: 0,
-        },
-      }, "-=0.8")
+        
+      }, "+=0.1")
       .to(letters, {
         
         filter: "brightness(0%)",
