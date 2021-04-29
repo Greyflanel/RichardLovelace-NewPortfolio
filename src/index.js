@@ -74,7 +74,7 @@ window.onload = function () {
           
           
         },
-      }, "-=1").to(letters, {
+      }, "-=0.5").to(letters, {
         filter: "brightness(105%)",
         
       });
