@@ -44,7 +44,7 @@ window.onload = function () {
       
     tl3.set(".content", {
       
-      filter: "brightness(110%)",
+      filter: "brightness(105%)",
       opacity: 1,
       
     }, "-=1").to(".content", {
@@ -60,7 +60,7 @@ window.onload = function () {
         
         duration: 2,
         opacity: 1,
-        filter: "brightness(110%)",
+        filter: "brightness(105%)",
         
       }, "+=0.1")
       .to(letters, {
@@ -68,16 +68,16 @@ window.onload = function () {
         filter: "brightness(0%)",
         stagger: {
           from: "edges",
-          each: 0.05,
-          repeat: 9,
+          each: 0.04,
+          repeat: 7,
           yoyo: true,
           
           
         },
       }, "-=1").to(letters, {
-        filter: "brightness(100%)",
+        filter: "brightness(105%)",
         
-      }, "+=2");
+      });
       
   }
     
