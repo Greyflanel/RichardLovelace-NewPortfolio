@@ -17,7 +17,7 @@ module.exports = {
   plugins: [
     
     new CopyWebpackPlugin({
-      patterns: [{ from: path.resolve(__dirname, "../static") }],
+      patterns: [{ from: path.resolve(__dirname, "../static/") }],
     }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "../src/index.html"),
@@ -63,12 +63,13 @@ module.exports = {
 
       // Images
       {
-        test: /\.(jpg|png|gif|svg|webp)$/,
+        test: /\.(jpg|png|gif|svg|webp|mp4)$/,
         use: [
           {
             loader: "file-loader",
             options: {
-              outputPath: "assets/images/",
+              outputPath: "assets/",
+              
             },
           },
         ],
@@ -81,7 +82,7 @@ module.exports = {
           {
             loader: "file-loader",
             options: {
-              outputPath: "assets/models/",
+              outputPath: "assets/",
             },
           },
         ],

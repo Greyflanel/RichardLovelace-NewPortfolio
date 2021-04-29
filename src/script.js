@@ -1,5 +1,5 @@
 import "/css/main.css";
-// import "./styles/style.css";
+import image from "../static/html-logo.png"
 import gsap from "gsap";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";

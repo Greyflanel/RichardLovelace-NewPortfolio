@@ -1,6 +1,18 @@
 import gsap from "gsap";
 import "./styles/style.css"
+import blackClover from "/static/black-clover-pub-video.mp4";
 import "./nav";
+import githubLogo from "/static/github.svg";
+import htmlLogo from "/static/html-logo.png";
+import devLogo from "/static/android-chrome-512x512.png";
+import cssLogo from "/static/css-logo.png";
+import jsLogo from "/static/js-logo.png";
+import reactLogo from "/static/react-logo.png";
+import gsapLogo from "/static/gsap-logo.png";
+import nodeLogo from "/static/node-logo.png";
+import knexLogo from "/static/knex-icon.png";
+import pythonLogo from "/static/python-logo.png";
+console.log(blackClover)
 var mqls = [
   window.matchMedia("(min-width: 1281px)"),
   window.matchMedia("(min-width: 1000px)"),
