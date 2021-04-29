@@ -12,7 +12,10 @@ import gsapLogo from "/static/gsap-logo.png";
 import nodeLogo from "/static/node-logo.png";
 import knexLogo from "/static/knex-icon.png";
 import pythonLogo from "/static/python-logo.png";
-console.log(blackClover)
+import postgresLogo from "/static/postgres-logo.png";
+console.log(htmlLogo)
+
+
 var mqls = [
   window.matchMedia("(min-width: 1281px)"),
   window.matchMedia("(min-width: 1000px)"),

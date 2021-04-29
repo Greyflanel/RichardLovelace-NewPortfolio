@@ -12,16 +12,10 @@ module.exports = {
   output: {
     filename: "bundler.[contenthash].js",
     path: path.resolve(__dirname, "../dist"),
-    clean: true
+    clean: true,
   },
   devtool: "source-map",
   plugins: [
-    new ImageminWebpWebpackPlugin({
-      detailedLogs: true,
-      overrideExtension: true,
-      silent: false,
-      strict: true,
-    }),
     new CopyWebpackPlugin({
       patterns: [{ from: path.resolve(__dirname, "../static/") }],
     }),
@@ -32,6 +26,13 @@ module.exports = {
     new MiniCSSExtractPlugin({
       filename: "[name].css",
       chunkFilename: "[id].css",
+    }),
+    new ImageminWebpWebpackPlugin({
+      detailedLogs: true,
+      overrideExtension: true,
+      silent: false,
+      strict: true,
+      quality: 75,
     }),
   ],
   module: {
@@ -74,8 +75,8 @@ module.exports = {
           {
             loader: "file-loader",
             options: {
+              name: "[name].[ext]",
               outputPath: "assets/",
-              
             },
           },
         ],
