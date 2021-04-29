@@ -1,6 +1,7 @@
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
+const ImageminWebpWebpackPlugin = require("imagemin-webp-webpack-plugin");
 const path = require('path');
 
 module.exports = {
@@ -15,7 +16,12 @@ module.exports = {
   },
   devtool: "source-map",
   plugins: [
-    
+    new ImageminWebpWebpackPlugin({
+      detailedLogs: true,
+      overrideExtension: true,
+      silent: false,
+      strict: true,
+    }),
     new CopyWebpackPlugin({
       patterns: [{ from: path.resolve(__dirname, "../static/") }],
     }),
