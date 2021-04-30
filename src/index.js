@@ -19,6 +19,7 @@ import pattern4 from "/static/pattern4.png";
 import linkedIn from "/static/linkedin.svg";
 import smoke from "/static/grape-smoke.mp4";
 import purpleBorder from "/static/purpleborder.png";
+import galaxy from "/static/galaxy.png";
 
 
 

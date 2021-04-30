@@ -299,9 +299,8 @@ a:active {
   box-shadow: 5px 10px 30px 8px #46324648;
   background-image: url("http://192.168.1.75:8080/assets/tech-bg.png");
   background-size: contain;
-  background-position: -3% 50%;
   background-blend-mode: saturation;
-  background-color: rgba(148, 112, 155, 0.447);
+  background-color: rgba(148, 112, 155, 0.347);
 }
 
 .card-wrapper {
