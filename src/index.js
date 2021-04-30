@@ -1,7 +1,8 @@
 import gsap from "gsap";
 import "./styles/style.css"
-import blackClover from "/static/black-clover-pub-video.mp4";
 import "./nav";
+import "./scroll";
+import blackClover from "/static/black-clover-pub-video.mp4";
 import githubLogo from "/static/github.svg";
 import htmlLogo from "/static/html-logo.png";
 import devLogo from "/static/android-chrome-512x512.png";
@@ -13,7 +14,12 @@ import nodeLogo from "/static/node-logo.png";
 import knexLogo from "/static/knex-icon.png";
 import pythonLogo from "/static/python-logo.png";
 import postgresLogo from "/static/postgres-logo.png";
-console.log(htmlLogo)
+import techBg from "/static/tech-bg.png";
+import pattern4 from "/static/pattern4.png";
+import linkedIn from "/static/linkedin.svg";
+import smoke from "/static/grape-smoke.mp4";
+import purpleBorder from "/static/purpleborder.png";
+
 
 
 var mqls = [

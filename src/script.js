@@ -99,10 +99,10 @@ loader.load(
 
 // // Light 2
 
-const pointLight2 = new THREE.PointLight(0x350061, 1);
+const pointLight2 = new THREE.PointLight(0x000000, 1);
 
 pointLight2.position.set(-3, -6, 3.16);
-pointLight2.intensity = 0.5;
+pointLight2.intensity = 0.9;
 
 scene.add(pointLight2);
 
