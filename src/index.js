@@ -15,6 +15,7 @@ import knexLogo from "/static/knex-icon.png";
 import pythonLogo from "/static/python-logo.png";
 import postgresLogo from "/static/postgres-logo.png";
 import planet from "/static/planet.png";
+import pl from "/static/pl.png";
 import avatar from "/static/me.png";
 import linkedIn from "/static/linkedin.svg";
 import smoke from "/static/grape-smoke.mp4";
