@@ -29,6 +29,8 @@ function scrollAnimation() {
   timeline
     .set(".smoke-vid, .smoke-text", {
       opacity: 0,
+    }).set(".smoke-text", {
+      y: 0
     })
     .call(playVideo, ["smokey"])
     .to(".smoke-vid", {
@@ -38,16 +40,16 @@ function scrollAnimation() {
     .to(
       ".smoke-text",
       {
-        delay: 6.8,
+        delay: 6.2,
         duration: 24,
         autoAlpha: 1,
       },
-      "-=6.98"
+      "-=6"
     )
     .to(
       ".smoke-vid",
       {
-        y: 30,
+        y: 10,
         duration: 3.5,
       },
       "-=25"
@@ -55,7 +57,7 @@ function scrollAnimation() {
     .to(
       ".smoke-vid",
       {
-        y: 30,
+        y: 18,
         duration: 3,
       },
       "-=26"
@@ -63,26 +65,26 @@ function scrollAnimation() {
     .to(
       ".smoke-vid",
       {
-        y: 55,
-        duration: 3.5,
-      },
-      "-=26"
-    )
-    .to(
-      ".smoke-vid",
-      {
-        y: -5,
-        duration: 5,
+        y: 45,
+        duration: 5.5,
       },
       "-=26.5"
     )
     .to(
       ".smoke-vid",
       {
-        y: -5,
-        duration: 4.5,
+        y: -35,
+        duration: 7,
       },
-      "-=25"
+      "-=4"
+    )
+    .to(
+      ".smoke-vid",
+      {
+        y: -35,
+        duration: 5,
+      },
+      "-=27"
     )
     .to(
       ".smoke-text",
@@ -90,14 +92,14 @@ function scrollAnimation() {
         y: 55,
         duration: 5.5,
       },
-      "-=25.5"
+      "-=27"
     )
     .to(
       ".smoke-vid",
       {
         autoAlpha: 0,
       },
-      "-=20.1"
+      "-=22.4"
     )
     .to(
       ".smoke",
