@@ -21,7 +21,7 @@ import linkedIn from "/static/linkedin.svg";
 import smoke from "/static/grape-smoke.mp4";
 import star from "/static/star.png";
 import purpleBorder from "/static/purpleborder.png";
-import galaxy from "/static/galaxy.png";
+import galaxy2 from "/static/galaxy2.png";
 
 
 

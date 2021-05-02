@@ -99,14 +99,14 @@ function scrollAnimation() {
       {
         autoAlpha: 0,
       },
-      "-=22.4"
+      "-=23"
     )
     .to(
       ".smoke",
       {
         autoAlpha: 0,
       },
-      "-=18.8"
+      "-=21.8"
     );
 
 
@@ -119,22 +119,27 @@ function scrollAnimation() {
             ".contact-info",
             {
               x: "16vw",
-              duration: 4.7,
+              ease: "rough.in",
+              duration: 4.5,
             },
-            "-=20"
+            "-=22.72"
           )
-          .to(".form-wrapper", { 
-            x: "-16vw",
-             duration: 4.7,
-             }, "-=20")
+          .to(
+            ".form-wrapper",
+            {
+              x: "-16vw",
+              duration: 4.5,
+              ease: "rough.in",
+            },
+            "-=22.72"
+          )
           .to(
             ".border1, .border2",
             {
-              
               autoAlpha: 1,
               duration: 3,
             },
-            "-=17.3"
+            "-=20"
           );
       },
     });
