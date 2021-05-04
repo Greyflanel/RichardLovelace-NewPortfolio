@@ -61,9 +61,9 @@ const particlesMaterial = new THREE.PointsMaterial({
 });
 
 // // Mesh
-const sphere = new THREE.Points(geometry, material);
+
 const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
-scene.add(sphere, particlesMesh);
+scene.add(particlesMesh);
 
 // 3D Models
 
@@ -114,10 +114,10 @@ scene.add(pointLight2);
 // light2.add(pointLight2, "intensity").min(0).max(10).step(0.01);
 
 // Light 3
-const pointLight3 = new THREE.PointLight(0x7d26cd, 0.5);
+const pointLight3 = new THREE.PointLight(0x8a2be2, 0.8);
 
-pointLight3.position.set(-8, 3.15, 10);
-pointLight3.intensity = 3.5;
+pointLight3.position.set(-8, 3, 8);
+pointLight3.intensity = 2.8;
 
 scene.add(pointLight3);
 
@@ -252,9 +252,9 @@ const tick = () => {
   const elapsedTime = clock.getElapsedTime();
 
   // Update objects
-  sphere.rotation.y = 0.5 * elapsedTime;
-  sphere.rotation.x = 0.5 * elapsedTime;
-  sphere.rotation.z = 0.5 * elapsedTime;
+  // sphere.rotation.y = 0.5 * elapsedTime;
+  // sphere.rotation.x = 0.5 * elapsedTime;
+  // sphere.rotation.z = 0.5 * elapsedTime;
 
   
   particlesMesh.rotation.x = mouseX * (elapsedTime * -0.00002);
