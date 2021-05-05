@@ -99,10 +99,10 @@ loader.load(
 
 // // Light 2
 
-const pointLight2 = new THREE.PointLight(0x000000, 1);
+const pointLight2 = new THREE.PointLight(0x00000);
 
-pointLight2.position.set(-3, -6, 3.16);
-pointLight2.intensity = 0.9;
+pointLight2.position.set(1, -2, 1.16);
+pointLight2.intensity = 3.9;
 
 scene.add(pointLight2);
 
@@ -114,9 +114,9 @@ scene.add(pointLight2);
 // light2.add(pointLight2, "intensity").min(0).max(10).step(0.01);
 
 // Light 3
-const pointLight3 = new THREE.PointLight(0x8a2be2, 0.8);
+const pointLight3 = new THREE.PointLight(0x512864);
 
-pointLight3.position.set(-8, 3, 8);
+pointLight3.position.set(-8, 3, 14);
 pointLight3.intensity = 2.8;
 
 scene.add(pointLight3);
@@ -210,8 +210,8 @@ const camera = new THREE.PerspectiveCamera(
   0.1,
   100
 );
-camera.position.x = 0;
-camera.position.y = -0.15;
+camera.position.x = 0.1;
+camera.position.y = -0.17;
 camera.position.z = 1;
 scene.add(camera);
 
@@ -234,8 +234,8 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
 document.addEventListener("mousemove", animatedParticles);
 
-let mouseX = 1;
-let mouseY = -1;
+let mouseX = 0.5;
+let mouseY = -0.5;
 
 function animatedParticles(event) {
   mouseY = event.clientY;
