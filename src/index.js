@@ -69,28 +69,31 @@ window.onload = function () {
         visibility: "visible",
         opacity: 0,
       })
-      .to(letters, {
-        
-        duration: 2,
-        opacity: 1,
-        filter: "brightness(105%)",
-        
-      }, "+=0.1")
-      .to(letters, {
-        
-        filter: "brightness(0%)",
-        stagger: {
-          from: "edges",
-          each: 0.04,
-          repeat: 7,
-          yoyo: true,
-          
-          
+      .to(
+        letters,
+        {
+          duration: 2,
+          opacity: 1,
+          filter: "brightness(105%)",
         },
-      }, "-=0.5").to(letters, {
+        "+=0.1"
+      )
+      .to(
+        letters,
+        {
+          filter: "brightness(0%)",
+          stagger: {
+            from: "edges",
+            each: 0.04,
+            repeat: 7,
+            yoyo: true,
+          },
+        },
+        "-=0.5"
+      )
+      .to(letters, {
         filter: "brightness(100%)",
-        color: "grey",
-        delay: 1
+        
       });
       
   }
