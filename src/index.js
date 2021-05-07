@@ -88,8 +88,9 @@ window.onload = function () {
           
         },
       }, "-=0.5").to(letters, {
-        filter: "brightness(105%)",
-        
+        filter: "brightness(100%)",
+        color: "grey",
+        delay: 1
       });
       
   }
