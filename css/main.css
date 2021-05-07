@@ -259,8 +259,8 @@ a:active {
   padding: 0.3% 4.5%;
   display: flex;
   border-radius: 5px;
-  margin-top: -6%;
-  margin-bottom: 2%;
+  margin-top: -9%;
+  margin-bottom: 1%;
   box-shadow: 5px 10px 30px 8px #46324648;
   background-color: #673a7c;
 }
@@ -521,7 +521,7 @@ a:active {
 
 .skills {
   width: 80%;
-  margin-top: 2%;
+  margin-top: 1%;
   padding: 1%;
   display: flex;
   justify-content: space-evenly;
@@ -573,7 +573,7 @@ a:active {
   display: flex;
   border-radius: 5px;
   margin-top: 1%;
-  margin-bottom: 2%;
+  margin-bottom: 1%;
   box-shadow: 5px 10px 30px 8px #46324648;
   background-color: #673a7c;
 }
@@ -594,7 +594,7 @@ a:active {
   flex-wrap: wrap;
   display: flex;
   align-items: center;
-  background-image: linear-gradient(45deg, rgba(32, 1, 48, 0.322) 0%, rgba(57, 55, 55, 0.2) 75%), url("http://192.168.1.75:8080/assets/pl.png");
+  background-image: linear-gradient(45deg, rgba(32, 1, 48, 0.322) 0%, rgba(57, 55, 55, 0.2) 75%), url("http://192.168.1.193:8080/assets/pl.png");
   background-repeat: no-repeat;
   background-blend-mode: saturation;
   box-shadow: 5px 10px 40px 5px #46324648;
@@ -623,7 +623,7 @@ a:active {
 
 .fourth-section-title {
   text-align: center;
-  margin-top: 2%;
+  margin-top: 1%;
   margin-bottom: 1%;
 }
 
@@ -651,7 +651,7 @@ a:active {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 5%;
+  margin-top: -2%;
 }
 
 @media (max-width: 1680px) {
@@ -695,6 +695,7 @@ a:active {
   flex-direction: column;
   width: 35%;
   margin: 0;
+  margin-bottom: 4%;
 }
 
 .form-wrapper:nth-child(4) {
@@ -704,7 +705,6 @@ a:active {
 @media (max-width: 1680px) {
   .form-wrapper {
     width: 50%;
-    margin-bottom: 4%;
   }
 }
 
@@ -814,7 +814,7 @@ input[type="submit"]:hover {
   z-index: 550;
   color: chartreuse;
   width: 35%;
-  height: 60%;
+  height: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -975,7 +975,7 @@ input[type="submit"]:hover {
 .border1 {
   position: absolute;
   z-index: 500;
-  top: 20%;
+  top: 24%;
   left: 10%;
   width: 75%;
   visibility: hidden;
@@ -984,7 +984,7 @@ input[type="submit"]:hover {
 .border2 {
   position: absolute;
   z-index: 500;
-  bottom: 2%;
+  bottom: 4%;
   right: 10%;
   width: 75%;
   transform: rotate(180deg);
