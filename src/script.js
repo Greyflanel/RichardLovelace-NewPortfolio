@@ -1,5 +1,4 @@
 import "/css/main.css";
-import image from "../static/html-logo.png"
 import gsap from "gsap";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
@@ -37,8 +36,6 @@ const particlesCount = 15000;
 const posArray = new Float32Array(particlesCount * 3);
 
 for (let i = 0; i < particlesCount * 3; i++) {
-  // posArray[i] = Math.random()
-  // posArray[i] = Math.random() - 0.5
   posArray[i] = (Math.random() - 0.5) * 6;
 }
 // // Materials
@@ -114,7 +111,7 @@ scene.add(pointLight2);
 // light2.add(pointLight2, "intensity").min(0).max(10).step(0.01);
 
 // Light 3
-const pointLight3 = new THREE.PointLight(0x551a8b, 0.8);
+const pointLight3 = new THREE.PointLight(0x820BBB);
 
 pointLight3.position.set(-8, 5, 8);
 pointLight3.intensity = 3;

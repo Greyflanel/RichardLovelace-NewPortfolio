@@ -597,7 +597,7 @@ a:active {
   flex-wrap: wrap;
   display: flex;
   align-items: center;
-  background-image: linear-gradient(45deg, rgba(32, 1, 48, 0.322) 0%, rgba(57,55,55,0.2) 75%), url("http://192.168.1.193:8080/assets/pl.png");
+  background-image: linear-gradient(45deg, rgba(32, 1, 48, 0.322) 0%, rgba(57,55,55,0.2) 75%), url("http://192.168.1.75:8080/assets/pl.png");
   background-repeat: no-repeat;
   background-blend-mode: saturation;
   box-shadow: 5px 10px 40px 5px #46324648;
@@ -641,6 +641,12 @@ a:active {
   background-color: #673a7c;
 }
 
+@media(max-width: 1680px) {
+  .fourth-section-title h1 {
+    width: 28vw;
+    margin-top: -1%;
+  }
+}
 
 .smoke {
   width: 50vw;
@@ -650,6 +656,12 @@ a:active {
   justify-content: center;
   align-items: center;
   margin-top: 5%;
+}
+
+@media (max-width: 1680px) {
+  .smoke {
+    margin-top: 0;
+  }
 }
 
 .smoke-vid {
@@ -686,16 +698,19 @@ a:active {
   display: flex;
   flex-direction: column;
   width: 35%;
-  
   margin: 0;
-  
 }
 
 .form-wrapper:nth-child(4) {
   align-items: center;
 }
 
-
+@media (max-width: 1680px) {
+  .form-wrapper {
+    width: 50%;
+    margin-bottom: 4%;
+  }
+}
 
 .send-a-message {
   margin: 0 auto;
@@ -815,10 +830,10 @@ input[type="submit"]:hover {
   align-items: center;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1680px) {
   .contact-info {
-    width: 70%;
-    
+    width: 40%;
+    height: 65%;
     
   }
 }
@@ -972,7 +987,7 @@ input[type="submit"]:hover {
 
 .border1 {
   position: absolute;
-  z-index: 50;
+  z-index: 500;
   top: 20%;
   left: 10%;
   width: 75%;
@@ -981,8 +996,8 @@ input[type="submit"]:hover {
 
 .border2 {
   position: absolute;
-  z-index: 50;
-  bottom: 5%;
+  z-index: 500;
+  bottom: 2%;
   right: 10%;
   width: 75%;
   transform: rotate(180deg);
