@@ -114,7 +114,7 @@ scene.add(pointLight2);
 const pointLight3 = new THREE.PointLight(0x673A7C);
 
 pointLight3.position.set(-8, 5, 8);
-pointLight3.intensity = 3;
+pointLight3.intensity = 4;
 
 scene.add(pointLight3);
 
