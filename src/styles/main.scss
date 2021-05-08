@@ -568,7 +568,7 @@ a:active {
 
 
 .third-section-title h1 {
-  color: rgb(245, 224, 248);
+  color: rgb(255, 255, 255);
   font-size: 4rem;
   padding: 0.3% 4.5%;
   display: flex;
@@ -597,10 +597,15 @@ a:active {
   flex-wrap: wrap;
   display: flex;
   align-items: center;
-  background-image: linear-gradient(45deg, rgba(32, 1, 48, 0.322) 0%, rgba(57,55,55,0.2) 75%), url("http://192.168.1.193:8080/assets/pl.png");
   background-repeat: no-repeat;
   background-blend-mode: saturation;
   box-shadow: 5px 10px 40px 5px #46324648;
+}
+
+@media (max-width: 1680px) {
+  .about-div {
+    margin-bottom: 0;
+  }
 }
 
 #third-section .about-div p {
@@ -626,12 +631,18 @@ a:active {
 
 .fourth-section-title {
   text-align: center;
-  margin-top: 1%;
+  margin-top: 2%;
   margin-bottom: 1%;
 }
 
+@media (max-width: 1680px) {
+  .fourth-section-title {
+    margin-bottom: 0.1%;
+  }
+}
+
 .fourth-section-title h1 {
-  color: rgb(245, 224, 248);
+  color: rgb(255, 255, 255);
   font-size: 4rem;
   padding: 0.3% 4.5%;
   width: 23vw;
@@ -643,8 +654,9 @@ a:active {
 
 @media(max-width: 1680px) {
   .fourth-section-title h1 {
-    width: 28vw;
+    width: 30vw;
     margin-top: -1%;
+    
   }
 }
 
@@ -685,10 +697,10 @@ a:active {
   text-align: center;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1680px) {
   .smoke-text {
-    font-size: 2.5rem;
-    margin-top: 7%;
+    font-size: 2.8rem;
+    margin-top: 1%;
   }
 }
 
