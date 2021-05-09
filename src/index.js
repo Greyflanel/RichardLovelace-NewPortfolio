@@ -2,26 +2,27 @@ import gsap from "gsap";
 import "./styles/style.css"
 import "./nav";
 import "./scroll";
-import blackClover from "/static/black-clover-pub-video.mp4";
-import githubLogo from "/static/github.svg";
-import htmlLogo from "/static/html-logo.png";
-import devLogo from "/static/android-chrome-192x192.png";
-import cssLogo from "/static/css-logo.png";
-import jsLogo from "/static/js-logo.png";
-import reactLogo from "/static/react-logo.png";
-import gsapLogo from "/static/gsap-logo.png";
-import nodeLogo from "/static/node-logo.png";
-import knexLogo from "/static/knex-icon.png";
-import pythonLogo from "/static/python-logo.png";
-import postgresLogo from "/static/postgres-logo.png";
-import planet from "/static/planet.png";
-import pl from "/static/pl.png";
-import avatar from "/static/me.png";
-import linkedIn from "/static/linkedin.svg";
-import smoke from "/static/grape-smoke.mp4";
-import star from "/static/star.png";
-import purpleBorder from "/static/purpleborder.png";
-import galaxy2 from "/static/galaxy2.png";
+import "/static/black-clover-pub-video.mp4";
+import "/static/github.svg";
+import "/static/html-logo.png";
+import "/static/android-chrome-192x192.png";
+import "/static/css-logo.png";
+import "/static/js-logo.png";
+import "/static/react-logo.png";
+import "/static/gsap-logo.png";
+import "/static/node-logo.png";
+import "/static/knex-icon.png";
+import "/static/python-logo.png";
+import "/static/postgres-logo.png";
+import "/static/planet.png";
+import "/static/pl.png";
+import "/static/me.png";
+import "/static/linkedin.svg";
+import "/static/grape-smoke.mp4";
+import "/static/star.png";
+import "/static/purpleborder.png";
+import "/static/galaxy2.png";
+import "/static/new-logo-color.png";
 
 
 
