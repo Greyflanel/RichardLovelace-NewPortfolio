@@ -247,8 +247,7 @@ a:active {
   color: rgb(245, 224, 248);
   font-size: 2.6rem;
   padding: 0.1% 4.5%;
-  display: flex;
-  
+  text-align: center;
   border-radius: 5px;
   margin-top: -9%;
   margin-bottom: 1%;
@@ -662,6 +661,24 @@ a:active {
   .fourth-section-title h1 {
     width: 30vw;
     margin-top: 1%;
+    margin-bottom:  4%;
+  }
+}
+
+@media(max-width: 800px) {
+  .fourth-section-title h1 {
+    font-size: 3.4rem;
+    width: 48vw;
+    margin-top: 1%;
+    margin-bottom:  4%;
+    padding: 1%;
+  }
+}
+
+@media(max-width: 600px) {
+  .fourth-section-title h1 {
+    font-size: 3rem;
+    width: 55vw;
     
   }
 }
@@ -727,6 +744,13 @@ a:active {
 @media (max-width: 1680px) {
   .form-wrapper {
     width: 50%;
+    
+  }
+}
+
+@media (max-width: 800px) {
+  .form-wrapper {
+    width: 80%;
     
   }
 }
@@ -853,7 +877,7 @@ input[type="submit"]:hover {
   .contact-info {
     width: 40%;
     height: 55%;
-    
+    padding: 15% 3%;
   }
 }
 

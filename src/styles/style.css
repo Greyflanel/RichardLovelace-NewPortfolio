@@ -91,6 +91,13 @@ html, body
   }
 }
 
+@media (max-width: 600px) {
+  .fourth-section-container {
+    height: 80vh;
+    flex-direction: column;
+  }
+}
+
 .about-div {
-  background-image: linear-gradient(48deg, rgba(103,58,124,0.4181022750897234) 27%, rgba(103,58,124,0.5973739837731968) 68%), url("http://192.168.1.193:8080/assets/pl.png");
+  background-image: linear-gradient(48deg, rgba(103,58,124,0.4181022750897234) 27%, rgba(103,58,124,0.5973739837731968) 68%), url("http://192.168.1.75:8080/assets/pl.png");
 }
