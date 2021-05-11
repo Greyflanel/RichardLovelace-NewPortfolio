@@ -73,7 +73,7 @@ loader.load(
     moon.rotation.y = -0.3;
     moon.rotation.x = -0.18;
    
-    moon.position.y = -0.12;
+    moon.position.y = -0.13;
     moon.position.x = -0.12;
     
     
