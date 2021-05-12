@@ -614,7 +614,7 @@ a:active {
 }
 
 .about-text {
-  padding: 1% 4%;
+  padding: 1% 2%;
   background-color: #f8f1fa;
   font-family: "Roboto", sans-serif;
   box-shadow: 5px 10px 30px 8px #46324648;
@@ -624,6 +624,7 @@ a:active {
   font-weight: 200;
   margin: 0.5%;
   margin-left: 14%;
+  border-radius: 1rem;
 }
 
 .about-text h2 {
