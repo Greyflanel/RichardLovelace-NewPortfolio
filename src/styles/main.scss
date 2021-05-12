@@ -53,18 +53,18 @@ section {
 
 @media (max-width: 1200px) {
   .fullscreen-nav a {
-    font-size: 1.9rem;
-    margin: 0 1%;
+    font-size: 1.4rem;
+    
   }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1280px) {
   .fullscreen-nav {
     display: none;
   }
 }
 
-@media (min-width: 1101px) {
+@media (min-width: 1280px) {
   .menu-btn {
     display: none;
   }
@@ -610,34 +610,39 @@ a:active {
 }
 
 .about-text {
-  padding: 1% 2%;
+  padding: 1% 1.5%;
   background-color: rgb(248, 241, 250);
-  
   box-shadow: 5px 10px 30px 8px #46324648;
-  width: 65%;
+  width: 55%;
   color: #222;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 200;
   margin: 0.5%;
   margin-left: 14%;
   border-radius: 1rem;
-
+  @media (max-width: 1280px) {
+    width: 70%;
+    padding: 1% 2%;
+  }
   h2 {
     color: #673a7c;
     font-family: "Lobster", cursive;
-    font-size: 1.4rem;
+    font-size: 1.25rem;
     font-weight: 400;
    
   }
-  p {
-    text-indent: 0.8em;
-    margin: 0.35% 0;
-  }
+  
   span {
     color: #673a7c;
     font-family: "Lobster", cursive;
-    font-size: 1.3rem;
+    font-size: 1.22rem;
     
+  }
+  
+  p {
+    text-indent: 0.8em;
+    margin: 0.15% 0;
+    font-family: 'Open Sans', sans-serif;
   }
 }
 

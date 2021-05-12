@@ -101,3 +101,9 @@ body {
     ),
     url("http://192.168.1.75:8080/assets/pl.png");
 }
+ 
+@media (max-width: 1280px) {
+      .about-div {
+        padding: 4% 0;
+      }
+    }
