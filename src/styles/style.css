@@ -1,32 +1,28 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    /* border: 2px solid red !important; */
-    
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* border: 2px solid red !important; */
 }
 
-html, body
-{
-    overflow-x: hidden;
-    overflow: auto;
-    
-    font-family: 'Poppins';
-    
+html,
+body {
+  overflow-x: hidden;
+  overflow: auto;
+
+  font-family: "Poppins";
 }
-.webgl
-{   
-    position: relative;
-    z-index: 1;
-    background-color: black;
-    height: 100vh;
+.webgl {
+  position: relative;
+  z-index: 1;
+  background-color: black;
+  height: 100vh;
 }
 
 #first-section {
   background-color: black;
   width: 100%;
   height: 100%;
-  
 }
 
 #second-section {
@@ -36,7 +32,6 @@ html, body
   margin-top: 10%;
   width: 100%;
   height: 120%;
-  
 }
 
 #third-section {
@@ -99,5 +94,10 @@ html, body
 }
 
 .about-div {
-  background-image: linear-gradient(48deg, rgba(103,58,124,0.4181022750897234) 27%, rgba(103,58,124,0.5973739837731968) 68%), url("http://192.168.1.75:8080/assets/pl.png");
+  background-image: linear-gradient(
+      48deg,
+      rgba(103, 58, 124, 0.4181022750897234) 27%,
+      rgba(103, 58, 124, 0.5973739837731968) 68%
+    ),
+    url("http://192.168.1.75:8080/assets/pl.png");
 }

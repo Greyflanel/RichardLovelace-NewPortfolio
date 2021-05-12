@@ -7,8 +7,6 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 
 // Loading
 
-
-
 const loader = new GLTFLoader();
 
 const textureLoader = new THREE.TextureLoader();
@@ -64,7 +62,6 @@ scene.add(particlesMesh);
 
 // 3D Models
 
-
 let moon;
 loader.load(
   "/models/moon.glb",
@@ -72,11 +69,10 @@ loader.load(
     moon = gltf.scene;
     moon.rotation.y = -0.3;
     moon.rotation.x = -0.18;
-   
+
     moon.position.y = -0.13;
     moon.position.x = -0.12;
-    
-    
+
     gltf.scene.scale.set(1.15, 1.15, 1.15);
     scene.add(gltf.scene);
   },
@@ -111,7 +107,7 @@ scene.add(pointLight2);
 // light2.add(pointLight2, "intensity").min(0).max(10).step(0.01);
 
 // Light 3
-const pointLight3 = new THREE.PointLight(0x673A7C);
+const pointLight3 = new THREE.PointLight(0x673a7c);
 
 pointLight3.position.set(-8, 5, 8);
 pointLight3.intensity = 4;
@@ -253,7 +249,6 @@ const tick = () => {
   // sphere.rotation.x = 0.5 * elapsedTime;
   // sphere.rotation.z = 0.5 * elapsedTime;
 
-  
   particlesMesh.rotation.x = mouseX * (elapsedTime * -0.000012);
   particlesMesh.rotation.y = mouseY * (elapsedTime * -0.000013);
 
@@ -268,5 +263,3 @@ const tick = () => {
 };
 
 tick();
-
-

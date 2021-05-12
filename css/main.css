@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   width: 100vw;
   overflow-x: hidden;
 }
@@ -32,7 +33,7 @@ section {
 }
 
 .fullscreen-nav a {
-  color: #673A7C;
+  color: #673a7c;
   text-shadow: 0.1px 0.6px 2px #3c2841;
   text-decoration: none;
   margin: 0 2.5%;
@@ -588,7 +589,7 @@ a:active {
 .my-image {
   position: absolute;
   top: 25%;
-  left: 4%;
+  left: 1%;
 }
 
 .about-div {
@@ -612,18 +613,29 @@ a:active {
   }
 }
 
-#third-section .about-div p {
-  font-size: 1.8rem;
-  margin: 1% auto;
-  padding: 2%;
-  height: 75%;
+.about-text {
+  padding: 1.5%;
   background-color: #f8f1fa;
-  border-radius: 2%;
+  font-family: "Roboto", sans-serif;
   box-shadow: 5px 10px 30px 8px #46324648;
+  width: 63%;
+  color: #222;
+  font-size: 1.2rem;
+  font-weight: 200;
+  margin: 1%;
+  margin-left: 14%;
 }
 
-.about-text {
-  width: 65%;
+.about-text h2 {
+  color: #673a7c;
+  font-family: "Lobster", cursive;
+  font-size: 1.45rem;
+  font-weight: 400;
+}
+
+.about-text p {
+  text-indent: 0.8em;
+  margin: 1% 0;
 }
 
 .divider {
@@ -844,7 +856,7 @@ input[type="submit"]:hover {
   left: 1%;
   border-radius: 50%;
   opacity: 1;
-  box-shadow: inset 0 0 3px white, 0 0 2px white, 0 0 3px white, 0 0 4px white, 0 2px 5px #3a043a, 0 4px 5px #3a043a;
+  box-shadow: inset 0 0 3px white, 0 0 2px white, 0 0 3px white, 0 0 4px white, 0 2px 5px #3a043a, 0 4px 5px #3a043a;
   background-color: rgba(20, 5, 18, 0.7);
 }
 
@@ -1054,11 +1066,5 @@ input[type="submit"]:hover {
   .border2 {
     display: none;
   }
-}
-
-.single-star {
-  position: relative;
-  z-index: 1000;
-  width: 40px;
 }
 /*# sourceMappingURL=main.css.map */

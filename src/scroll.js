@@ -6,7 +6,7 @@ function playVideo(el) {
   let vid = document.getElementById(el);
   vid.play();
   console.log("playing video");
-};
+}
 
 // function pauseVideo(el) {
 //   let vid = document.getElementById(el);
@@ -23,14 +23,13 @@ let timeline = gsap.timeline({
   },
 });
 
-
 function scrollAnimation() {
-  
   timeline
     .set(".smoke-vid, .smoke-text", {
       opacity: 0,
-    }).set(".smoke-text", {
-      y: 0
+    })
+    .set(".smoke-text", {
+      y: 0,
     })
     .call(playVideo, ["smokey"])
     .to(".smoke-vid", {
@@ -109,40 +108,37 @@ function scrollAnimation() {
       "-=21.8"
     );
 
-
-
-    ScrollTrigger.matchMedia({
-      
-      "(min-width: 1100px)": () => {
-        timeline
-          .to(
-            ".contact-info",
-            {
-              x: "12vw",
-              ease: "rough.in",
-              duration: 4.5,
-            },
-            "-=22.72"
-          )
-          .to(
-            ".form-wrapper",
-            {
-              x: "-12vw",
-              duration: 4.5,
-              ease: "rough.in",
-            },
-            "-=22.72"
-          )
-          .to(
-            ".border1, .border2",
-            {
-              autoAlpha: 1,
-              duration: 3,
-            },
-            "-=20"
-          );
-      },
-    });
+  ScrollTrigger.matchMedia({
+    "(min-width: 1100px)": () => {
+      timeline
+        .to(
+          ".contact-info",
+          {
+            x: "12vw",
+            ease: "rough.in",
+            duration: 4.5,
+          },
+          "-=22.72"
+        )
+        .to(
+          ".form-wrapper",
+          {
+            x: "-12vw",
+            duration: 4.5,
+            ease: "rough.in",
+          },
+          "-=22.72"
+        )
+        .to(
+          ".border1, .border2",
+          {
+            autoAlpha: 1,
+            duration: 3,
+          },
+          "-=20"
+        );
+    },
+  });
 }
- 
+
 scrollAnimation();
