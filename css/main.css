@@ -638,6 +638,12 @@ a:active {
   margin: 1% 0;
 }
 
+.about-text span {
+  color: #673a7c;
+  font-family: "Lobster", cursive;
+  font-size: 1.3rem;
+}
+
 .divider {
   border-bottom: 2px solid #4b3753;
   width: 90%;
