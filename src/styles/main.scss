@@ -605,11 +605,12 @@ a:active {
 @media (max-width: 1680px) {
   .about-div {
     margin-bottom: 0;
+   
   }
 }
 
 .about-text {
-  padding: 1.5%;
+  padding: 1% 4%;
   background-color: rgb(248, 241, 250);
   font-family: "Roboto", sans-serif;
   box-shadow: 5px 10px 30px 8px #46324648;
@@ -619,6 +620,7 @@ a:active {
   font-weight: 200;
   margin: 0.5%;
   margin-left: 14%;
+  
   h2 {
     color: #673a7c;
     font-family: "Lobster", cursive;
@@ -628,7 +630,7 @@ a:active {
   }
   p {
     text-indent: 0.8em;
-    margin: 0.5% 0;
+    margin: 0.35% 0;
   }
   span {
     color: #673a7c;
@@ -695,7 +697,7 @@ a:active {
 }
 
 .smoke {
-  width: 50vw;
+  width: 60vw;
   height: 70%;
   position: relative;
   display: flex;

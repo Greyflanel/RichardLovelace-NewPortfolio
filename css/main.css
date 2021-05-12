@@ -614,7 +614,7 @@ a:active {
 }
 
 .about-text {
-  padding: 1.5%;
+  padding: 1% 4%;
   background-color: #f8f1fa;
   font-family: "Roboto", sans-serif;
   box-shadow: 5px 10px 30px 8px #46324648;
@@ -635,7 +635,7 @@ a:active {
 
 .about-text p {
   text-indent: 0.8em;
-  margin: 0.5% 0;
+  margin: 0.35% 0;
 }
 
 .about-text span {
@@ -700,7 +700,7 @@ a:active {
 }
 
 .smoke {
-  width: 50vw;
+  width: 60vw;
   height: 70%;
   position: relative;
   display: flex;
