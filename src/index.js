@@ -21,7 +21,7 @@ import "/static/linkedin.svg";
 import "/static/grape-smoke.mp4";
 import "/static/star.png";
 import "/static/purpleborder.png";
-import "/static/galaxy2.png";
+import "/static/pattern1.png";
 import "/static/new-logo-color.png";
 
 var mqls = [

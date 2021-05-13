@@ -286,7 +286,10 @@ a:active {
   flex-wrap: wrap;
   padding-bottom: 5%;
   box-shadow: 5px 10px 30px 8px #46324648;
-  background: linear-gradient(45deg, #280741, #fadcee, #422a5b);
+  background-color: #e5e5f7;
+opacity: 1;
+background-image: radial-gradient(circle at center center, #673a7c, #e5e5f7), repeating-radial-gradient(circle at center center, #673a7c, #673a7cb7, 10px, transparent 20px, transparent 10px);
+background-blend-mode: multiply;
 }
 
 .card-wrapper {
@@ -583,8 +586,8 @@ a:active {
 
 .my-image {
   position: absolute;
-  top: 25%;
-  left: 1%;
+  top: 21%;
+  left: 4%;
   
 }
 
@@ -614,12 +617,13 @@ a:active {
   padding: 1% 1.5%;
   background-color: rgb(248, 241, 250);
   box-shadow: 5px 10px 30px 8px #46324648;
-  width: 55%;
+  width: 58%;
   color: #222;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 200;
   margin: 0.5%;
-  margin-left: 16%;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 1rem;
   @media (max-width: 1280px) {
     width: 70%;
@@ -628,7 +632,7 @@ a:active {
   h2 {
     color: #673a7c;
     font-family: "Lobster", cursive;
-    font-size: 1.25rem;
+    font-size: 1.28rem;
     font-weight: 400;
    
   }
