@@ -84,12 +84,8 @@ body {
 }
 
 .about-div {
-  
-
-
-background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #673A7C 15px ), repeating-linear-gradient( #e5e5f755, #673A7C );
-
-
+  box-shadow: 5px 10px 30px 8px #46324648;
+background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #673A7C 14px ), repeating-linear-gradient( #e5e5f73d, #673a7cbd );
 }
  
 @media (max-width: 1280px) {
@@ -97,3 +93,5 @@ background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #673
         padding: 4% 0;
       }
     }
+
+    
