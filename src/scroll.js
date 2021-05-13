@@ -114,7 +114,7 @@ function scrollAnimation() {
         .to(
           ".contact-info",
           {
-            x: "12vw",
+            x: "10vw",
             ease: "rough.in",
             duration: 4.5,
           },
@@ -123,7 +123,7 @@ function scrollAnimation() {
         .to(
           ".form-wrapper",
           {
-            x: "-12vw",
+            x: "-10vw",
             duration: 4.5,
             ease: "rough.in",
           },

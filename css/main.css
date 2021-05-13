@@ -34,7 +34,7 @@ section {
 
 .fullscreen-nav a {
   color: #673a7c;
-  text-shadow: 0.1px 0.6px 2px #3c2841;
+  text-shadow: 0.1px 0.6px 1px #3c2841;
   text-decoration: none;
   margin: 0 2.5%;
 }
@@ -621,7 +621,7 @@ a:active {
   font-size: 1.1rem;
   font-weight: 200;
   margin: 0.5%;
-  margin-left: 18%;
+  margin-left: 16%;
   border-radius: 1rem;
 }
 
@@ -701,8 +701,15 @@ a:active {
 
 @media (max-width: 600px) {
   .fourth-section-title h1 {
-    font-size: 3rem;
+    font-size: 2.2rem;
     width: 55vw;
+  }
+}
+
+@media (max-width: 400px) {
+  .fourth-section-title h1 {
+    font-size: 2.1rem;
+    width: 60vw;
   }
 }
 
@@ -757,7 +764,7 @@ a:active {
   flex-direction: column;
   width: 35%;
   margin: 0;
-  margin-bottom: 4%;
+  margin-bottom: 3%;
 }
 
 .form-wrapper:nth-child(4) {
@@ -766,13 +773,25 @@ a:active {
 
 @media (max-width: 1680px) {
   .form-wrapper {
-    width: 50%;
+    width: 65%;
+  }
+}
+
+@media (max-width: 1280px) {
+  .form-wrapper {
+    width: 70%;
   }
 }
 
 @media (max-width: 800px) {
   .form-wrapper {
     width: 80%;
+  }
+}
+
+@media (max-width: 400px) {
+  .form-wrapper {
+    width: 90%;
   }
 }
 
@@ -786,10 +805,10 @@ a:active {
   width: 85%;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1680px) {
   .send-a-message {
     width: 90%;
-    font-size: 1.7rem;
+    font-size: 2rem;
   }
 }
 
@@ -800,14 +819,27 @@ a:active {
   }
 }
 
+@media (max-width: 600px) {
+  .send-a-message {
+    width: 90%;
+    font-size: 1.7rem;
+  }
+}
+
 .contact-container {
   width: 100%;
   border-radius: 5px;
   background-color: #550055;
-  padding: 25px;
+  padding: 5%;
   color: white;
   font-size: 1.2rem;
   border: 2px solid rgba(5, 0, 5, 0.658);
+}
+
+@media (max-width: 1280px) {
+  .contact-container {
+    padding: 6% 8%;
+  }
 }
 
 form {
@@ -816,14 +848,12 @@ form {
   justify-content: center;
 }
 
-input[type="text"],
-select,
 textarea {
   width: 100%;
   padding: 2%;
   border: 1px solid #ccc;
   border-radius: 4px;
-  margin-top: 2%;
+  margin-top: 0.5%;
   margin-bottom: 2%;
   resize: none;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
@@ -836,12 +866,24 @@ input[type="text"] {
 
 input[type="submit"] {
   background-color: chartreuse;
-  padding: 4%;
+  padding: 3%;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   width: 23%;
-  font-size: 1rem;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 1680px) {
+  input[type="submit"] {
+    width: 30%;
+  }
+}
+
+@media (max-width: 1400px) {
+  input[type="submit"] {
+    width: 40%;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -860,6 +902,14 @@ input[type="submit"]:hover {
   background-color: #0a01119a;
   color: white;
   box-shadow: 0 0 4px white;
+}
+
+label {
+  margin-bottom: 0.7%;
+}
+
+.input {
+  height: 1.6rem;
 }
 
 .developer-logo {
@@ -895,14 +945,13 @@ input[type="submit"]:hover {
   .contact-info {
     width: 40%;
     height: 55%;
-    padding: 15% 3%;
+    padding: 14% 2%;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .contact-info {
-    width: 95%;
-    margin-bottom: -10%;
+    width: 90%;
     border: none;
     padding: 1%;
   }
@@ -914,6 +963,13 @@ input[type="submit"]:hover {
   text-align: center;
   border-bottom: 1px solid chartreuse;
   width: 90%;
+}
+
+@media (max-width: 1680px) {
+  .contact-info h3 {
+    width: 95%;
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 1400px) {
@@ -935,9 +991,10 @@ input[type="submit"]:hover {
   justify-content: space-evenly;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .social {
     margin-top: -10%;
+    justify-content: space-around;
   }
 }
 
@@ -947,9 +1004,9 @@ input[type="submit"]:hover {
   font-size: 1.8rem;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .linkedin {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -969,15 +1026,22 @@ input[type="submit"]:hover {
   }
 }
 
+@media (max-width: 600px) {
+  .linkedin img {
+    width: 3rem;
+    margin-top: 10%;
+  }
+}
+
 .github {
   text-decoration: none;
   color: chartreuse;
   font-size: 1.8rem;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .github {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -997,18 +1061,26 @@ input[type="submit"]:hover {
   }
 }
 
+@media (max-width: 600px) {
+  .github img {
+    width: 3rem;
+    margin-top: 10%;
+  }
+}
+
 .email {
   font-size: 1.8rem;
   word-wrap: break-word;
   width: 100%;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .email {
     width: 100%;
-    margin-top: 5%;
-    margin-left: 25%;
+    margin-top: 8%;
+    margin-left: 32%;
     font-size: 1.8rem;
+    margin-bottom: 8%;
   }
 }
 
@@ -1019,7 +1091,7 @@ input[type="submit"]:hover {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   .email h5 {
     margin-bottom: -5%;
   }
@@ -1034,10 +1106,11 @@ input[type="submit"]:hover {
   font-size: 1.7rem;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .email p {
     width: 80%;
     font-size: 1.4rem;
+    margin-top: 4%;
   }
 }
 
@@ -1058,18 +1131,19 @@ input[type="submit"]:hover {
   width: 75%;
   transform: rotate(180deg);
   visibility: hidden;
+  pointer-events: none;
 }
 
 @media (max-width: 1680px) {
   .border1 {
-    top: 21%;
+    top: 24%;
     left: 8%;
   }
 }
 
 @media (max-width: 1680px) {
   .border2 {
-    bottom: 4%;
+    bottom: 5%;
     right: 8%;
   }
 }
