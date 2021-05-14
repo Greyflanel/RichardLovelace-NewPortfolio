@@ -23,6 +23,7 @@ import "/static/star.png";
 import "/static/purpleborder.png";
 import "/static/pattern1.png";
 import "/static/new-logo-color.png";
+import "/static/galaxy2.png";
 
 var mqls = [
   window.matchMedia("(min-width: 1281px)"),

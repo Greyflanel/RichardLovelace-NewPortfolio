@@ -591,6 +591,14 @@ background-blend-mode: multiply;
   
 }
 
+.plan {
+  position: relative;
+  z-index: 1400;
+  right: 10%;
+  width: 25%;
+  transform: rotate(-135deg);
+}
+
 .about-div {
   display: flex;
   width: 95%;
@@ -601,8 +609,8 @@ background-blend-mode: multiply;
   flex-wrap: wrap;
   display: flex;
   align-items: center;
-  background-repeat: no-repeat;
-  background-blend-mode: lighten;
+  
+  background-blend-mode: darken;
   box-shadow: 5px 10px 40px 5px #46324648;
 }
 
