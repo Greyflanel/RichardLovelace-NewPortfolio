@@ -76,7 +76,7 @@ body {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .fourth-section-container {
     height: 100%;
     flex-direction: column;
@@ -84,14 +84,11 @@ body {
 }
 
 .about-div {
-  box-shadow: 5px 10px 30px 8px #46324648;
-
+box-shadow: 5px 10px 30px 8px #46324648;
 background-color: #e5e5f7;
 opacity: 1;
-
-
 background-image:   radial-gradient(#4b3158a1 4px, #e5e5f7 48px), linear-gradient(180deg, #2807416b, #fadcee, #422a5b36);
-background-size: 50px 80px;
+background-size: 70px 80px;
 background-position: 0 0,40px 40px;
 }
  
