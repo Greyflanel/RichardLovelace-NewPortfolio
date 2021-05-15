@@ -48,7 +48,7 @@ const material = new THREE.PointsMaterial({
 });
 
 const particlesMaterial = new THREE.PointsMaterial({
-  size: 0.04,
+  size: 0.03,
   map: star,
   transparent: true,
   color: "#ffffff",
@@ -209,10 +209,14 @@ camera.position.z = 1;
 scene.add(camera);
 
 //Controls
-// const controls = new OrbitControls(camera, canvas);
-// controls.enableDamping = true;
-// controls.update;
-
+const controls = new OrbitControls(camera, canvas);
+controls.enableDamping = true;
+controls.autoRotate = true;
+controls.enableZoom = false;
+controls.autoRotateSpeed = 0.2;
+controls.enablePan = false;
+controls.update;
+console.log(controls)
 /**
  * Renderer
  */
@@ -249,11 +253,11 @@ const tick = () => {
   // sphere.rotation.x = 0.5 * elapsedTime;
   // sphere.rotation.z = 0.5 * elapsedTime;
 
-  particlesMesh.rotation.x = mouseX * (elapsedTime * -0.000012);
-  particlesMesh.rotation.y = mouseY * (elapsedTime * -0.000013);
+  particlesMesh.rotation.x = mouseX * (elapsedTime * -0.000002);
+  particlesMesh.rotation.y = mouseY * (elapsedTime * -0.000003);
 
   // Update Orbital Controls
-  // controls.update();
+  controls.update();
 
   // Render
   renderer.render(scene, camera);
