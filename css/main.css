@@ -216,6 +216,12 @@ a:active {
   text-shadow: 0 0 0.5px #673a7c, 0 0 1px #673a7c, 0 0 2px #673a7c, 0 0 3px whitesmoke, 0 0 4.2px #e0dede;
 }
 
+@media (max-width: 400px) {
+  .content {
+    right: 10%;
+  }
+}
+
 .content-name {
   margin: 0;
   font-size: 5.2rem;
@@ -228,9 +234,40 @@ a:active {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
+  .content-name {
+    font-size: 4.3rem;
+    margin-top: 5%;
+  }
+}
+
+@media (max-width: 700px) {
   .content-name {
     font-size: 4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .content-name {
+    font-size: 3.4rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .content-name {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .content-name {
+    font-size: 2.6rem;
+  }
+}
+
+@media (max-width: 300px) {
+  .content-name {
+    font-size: 2.3rem;
   }
 }
 
@@ -246,10 +283,27 @@ a:active {
   }
 }
 
+@media (max-width: 700px) {
+  .content-title {
+    font-size: 2.7rem;
+  }
+}
+
 @media (max-width: 600px) {
   .content-title {
-    margin-top: 75%;
-    font-size: 2.7rem;
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .content-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .content-title {
+    font-size: 1.8rem;
   }
 }
 
@@ -684,12 +738,12 @@ a:active {
 .about-text span {
   color: #673a7c;
   font-family: "Lobster", cursive;
-  font-size: 1.22rem;
+  font-size: 1.24rem;
 }
 
 .about-text p {
   text-indent: 0.8em;
-  margin: 0.15% 0;
+  text-align: left;
   font-family: 'Open Sans', sans-serif;
 }
 
