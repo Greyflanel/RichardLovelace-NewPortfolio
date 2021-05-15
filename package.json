@@ -44,16 +44,19 @@
     "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.1",
     "lodash": "^4.17.21",
-    "mini-css-extract-plugin": "^1.5.0",
+    "mini-css-extract-plugin": "^1.5.1",
     "node-sass": "^5.0.0",
     "portfinder-sync": "^0.0.2",
     "raw-loader": "^4.0.2",
     "sass-loader": "^11.0.1",
     "style-loader": "^2.0.0",
-    "three": "^0.127.0",
-    "webpack": "^5.35.0",
+    "three": "^0.128.0",
+    "webpack": "^5.36.1",
     "webpack-cli": "^4.6.0",
     "webpack-dev-server": "^3.11.2",
     "webpack-merge": "^5.7.3"
+  },
+  "devDependencies": {
+    "imagemin-webp-webpack-plugin": "^3.3.4"
   }
 }
