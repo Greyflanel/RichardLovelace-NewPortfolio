@@ -1,6 +1,5 @@
 import "/css/main.css";
 import "./scroll";
-import "/static/star.png";
 import gsap from "gsap";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
