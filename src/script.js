@@ -217,6 +217,7 @@ controls.autoRotate = true;
 controls.enableZoom = false;
 controls.autoRotateSpeed = 0.15;
 controls.enablePan = false;
+
 controls.update;
 console.log(controls)
 /**
