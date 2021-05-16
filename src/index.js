@@ -1,7 +1,6 @@
 import gsap from "gsap";
 import "./styles/style.css";
 import "./nav";
-import "./script";
 import "/static/black-clover-pub-video.mp4";
 import "/static/github.svg";
 import "/static/html-logo.png";
@@ -18,6 +17,7 @@ import "/static/linkedin.svg";
 import "/static/grape-smoke.mp4";
 import "/static/purpleborder.png";
 import "/static/new-logo-color.png";
+import "/static/richardlovelace-portfolio.mp4";
 
 
 var mqls = [

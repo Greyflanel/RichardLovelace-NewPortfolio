@@ -261,6 +261,9 @@ const tick = () => {
   // Update Orbital Controls
   controls.update();
 
+
+
+
   // Render
   renderer.render(scene, camera);
 

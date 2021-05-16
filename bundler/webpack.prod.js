@@ -8,7 +8,7 @@ module.exports = merge(commonConfiguration, {
     maxEntrypointSize: 500000000,
     hints: 'error',
     assetFilter: function(assetFilename) {
-      return !assetFilename.endsWith('.jpg');
+      return !assetFilename.endsWith('.jpg, .mp4, .png, .glb');
     },
   },
   mode: "production",

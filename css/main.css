@@ -216,12 +216,6 @@ a:active {
   text-shadow: 0 0 0.5px #673a7c, 0 0 1px #673a7c, 0 0 2px #673a7c, 0 0 3px whitesmoke, 0 0 3.4px #e0dede;
 }
 
-@media (max-width: 400px) {
-  .content {
-    right: -6%;
-  }
-}
-
 .content-name {
   margin: 0;
   font-size: 5.2rem;
@@ -261,7 +255,7 @@ a:active {
 
 @media (max-width: 400px) {
   .content-name {
-    font-size: 2.4rem;
+    font-size: 2.3rem;
   }
 }
 
