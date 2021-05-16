@@ -7,7 +7,6 @@ const path = require("path");
 module.exports = {
   entry: {
     index: "./src/index.js",
-    script: "./src/script.js",
   },
   output: {
     filename: "bundler.[contenthash].js",
@@ -16,6 +15,13 @@ module.exports = {
   },
   devtool: "source-map",
   plugins: [
+    new ImageminWebpWebpackPlugin({
+      detailedLogs: true,
+      overrideExtension: true,
+      silent: false,
+      strict: true,
+      quality: 75,
+    }),
     new CopyWebpackPlugin({
       patterns: [{ from: path.resolve(__dirname, "../static/") }],
     }),
@@ -26,13 +32,6 @@ module.exports = {
     new MiniCSSExtractPlugin({
       filename: "[name].css",
       chunkFilename: "[id].css",
-    }),
-    new ImageminWebpWebpackPlugin({
-      detailedLogs: true,
-      overrideExtension: true,
-      silent: false,
-      strict: true,
-      quality: 75,
     }),
   ],
   module: {

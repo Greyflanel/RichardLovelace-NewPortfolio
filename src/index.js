@@ -1,11 +1,10 @@
 import gsap from "gsap";
 import "./styles/style.css";
 import "./nav";
-import "./scroll";
+import "./script";
 import "/static/black-clover-pub-video.mp4";
 import "/static/github.svg";
 import "/static/html-logo.png";
-import "/static/android-chrome-192x192.png";
 import "/static/css-logo.png";
 import "/static/js-logo.png";
 import "/static/react-logo.png";
@@ -14,16 +13,12 @@ import "/static/node-logo.png";
 import "/static/knex-icon.png";
 import "/static/python-logo.png";
 import "/static/postgres-logo.png";
-import "/static/planet.png";
-import "/static/pl.png";
 import "/static/me.png";
 import "/static/linkedin.svg";
 import "/static/grape-smoke.mp4";
-import "/static/star.png";
 import "/static/purpleborder.png";
-import "/static/pattern1.png";
 import "/static/new-logo-color.png";
-import "/static/galaxy2.png";
+
 
 var mqls = [
   window.matchMedia("(min-width: 1281px)"),

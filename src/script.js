@@ -1,4 +1,6 @@
 import "/css/main.css";
+import "./scroll";
+import "/static/star.png";
 import gsap from "gsap";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
@@ -70,7 +72,7 @@ loader.load(
     moon.rotation.y = -0.3;
     moon.rotation.x = -0.18;
 
-    moon.position.y = -0.03;
+    moon.position.y = -0.13;
     moon.position.x = -0.12;
 
     gltf.scene.scale.set(1.15, 1.15, 1.15);
@@ -213,7 +215,7 @@ const controls = new OrbitControls(camera, canvas);
 controls.enableDamping = true;
 controls.autoRotate = true;
 controls.enableZoom = false;
-controls.autoRotateSpeed = 0.2;
+controls.autoRotateSpeed = 0.15;
 controls.enablePan = false;
 controls.update;
 console.log(controls)
@@ -253,8 +255,8 @@ const tick = () => {
   // sphere.rotation.x = 0.5 * elapsedTime;
   // sphere.rotation.z = 0.5 * elapsedTime;
 
-  particlesMesh.rotation.x = mouseX * (elapsedTime * -0.000002);
-  particlesMesh.rotation.y = mouseY * (elapsedTime * -0.000003);
+  particlesMesh.rotation.x = mouseX * (elapsedTime * -0.0000022);
+  particlesMesh.rotation.y = mouseY * (elapsedTime * -0.0000023);
 
   // Update Orbital Controls
   controls.update();
