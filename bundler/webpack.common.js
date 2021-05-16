@@ -11,7 +11,7 @@ module.exports = {
   },
   output: {
     filename: "bundler.[contenthash].js",
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "../dist"),
     clean: true,
   },
   devtool: "source-map",
@@ -77,7 +77,7 @@ module.exports = {
             loader: "file-loader",
             options: {
               name: "[name].[ext]",
-              outputPath: "assets/",
+              outputPath: "static/",
             },
           },
         ],
