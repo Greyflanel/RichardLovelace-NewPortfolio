@@ -70,7 +70,7 @@ loader.load(
   function (gltf) {
     moon = gltf.scene;
     moon.rotation.y = -0.3;
-    moon.rotation.x = -0.18;
+    moon.rotation.x = -0.2;
 
     moon.position.y = -0.13;
     moon.position.x = -0.12;
