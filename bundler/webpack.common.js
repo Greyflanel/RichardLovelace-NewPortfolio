@@ -7,7 +7,7 @@ const path = require("path");
 module.exports = {
   entry: {
     index: "./src/index.js",
-    script: "./src/script.js",
+    script: "./src/script.js"
   },
   output: {
     filename: "bundler.[contenthash].js",
@@ -16,8 +16,15 @@ module.exports = {
   },
   devtool: "source-map",
   plugins: [
+    new ImageminWebpWebpackPlugin({
+      detailedLogs: true,
+      overrideExtension: true,
+      silent: false,
+      strict: true,
+      quality: 75,
+    }),
     new CopyWebpackPlugin({
-      patterns: [{ from: path.resolve(__dirname, "../static/") }],
+      patterns: [{ from: path.resolve(__dirname, "/static/") }],
     }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "../src/index.html"),
@@ -26,13 +33,6 @@ module.exports = {
     new MiniCSSExtractPlugin({
       filename: "[name].css",
       chunkFilename: "[id].css",
-    }),
-    new ImageminWebpWebpackPlugin({
-      detailedLogs: true,
-      overrideExtension: true,
-      silent: false,
-      strict: true,
-      quality: 75,
     }),
   ],
   module: {
@@ -54,6 +54,7 @@ module.exports = {
       {
         test: /\.css$/,
         use: [MiniCSSExtractPlugin.loader, "css-loader"],
+        
       },
       //   Sass/Scss
       {
@@ -76,7 +77,7 @@ module.exports = {
             loader: "file-loader",
             options: {
               name: "[name].[ext]",
-              outputPath: "assets/",
+              outputPath: "static/",
             },
           },
         ],

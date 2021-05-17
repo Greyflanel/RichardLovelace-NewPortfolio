@@ -23,6 +23,25 @@ let timeline = gsap.timeline({
   },
 });
 
+
+// let timeline1 = gsap.timeline({
+//   repeat: 0,
+//   ease: "power1.inOut",
+//   scrollTrigger: {
+//     trigger: "#first-section",
+//     start: "bottom 5%",
+//     toggleActions: "restart complete reset reset",
+//   },
+// });
+// timeline1
+//   .set(".fullscreen-nav-a", {
+//     color: "#CDB5CD",
+//   })
+//   .to(".fullscreen-nav-a", {
+//     color: "#673a7c",
+//   });
+
+
 function scrollAnimation() {
   timeline
     .set(".smoke-vid, .smoke-text", {
