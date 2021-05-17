@@ -7,7 +7,7 @@ const path = require("path");
 module.exports = {
   entry: {
     index: "./src/index.js",
-    script: "./src/script.js",
+    script: "./src/script.js"
   },
   output: {
     filename: "bundler.[contenthash].js",
@@ -24,7 +24,7 @@ module.exports = {
       quality: 75,
     }),
     new CopyWebpackPlugin({
-      patterns: [{ from: path.resolve(__dirname, "../static/") }],
+      patterns: [{ from: path.resolve(__dirname, "/static/") }],
     }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "../src/index.html"),
@@ -77,7 +77,7 @@ module.exports = {
             loader: "file-loader",
             options: {
               name: "[name].[ext]",
-              outputPath: "assets/",
+              outputPath: "static/",
             },
           },
         ],

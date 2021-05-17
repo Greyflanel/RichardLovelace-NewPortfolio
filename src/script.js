@@ -1,6 +1,6 @@
 import "/css/main.css";
 import "./scroll";
-import "/static/star.png";
+import "./"
 import gsap from "gsap";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
@@ -217,6 +217,7 @@ controls.autoRotate = true;
 controls.enableZoom = false;
 controls.autoRotateSpeed = 0.15;
 controls.enablePan = false;
+
 controls.update;
 console.log(controls)
 /**
