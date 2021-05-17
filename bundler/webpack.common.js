@@ -74,7 +74,7 @@ module.exports = {
         test: /\.(jpg|png|gif|svg|webp|mp4)$/,
         use: [
           {
-            loader: "url-loader",
+            loader: "file-loader",
             options: {
               name: "[name].[ext]",
               outputPath: "assets/",
