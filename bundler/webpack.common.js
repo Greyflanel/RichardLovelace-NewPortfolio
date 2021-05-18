@@ -77,7 +77,7 @@ module.exports = {
             loader: "file-loader",
             options: {
               name: "[name].[ext]",
-              outputPath: "assets/",
+             
             },
           },
         ],
@@ -90,9 +90,7 @@ module.exports = {
         use: [
           {
             loader: "file-loader",
-            options: {
-              outputPath: "assets/fonts/",
-            },
+            
           },
         ],
       },
