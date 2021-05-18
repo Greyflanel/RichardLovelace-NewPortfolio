@@ -24,7 +24,7 @@ module.exports = {
       quality: 75,
     }),
     new CopyWebpackPlugin({
-      patterns: [{ from: path.resolve(__dirname, "/static/") }],
+      patterns: [{ from: path.resolve(__dirname, "../static/") }],
     }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "../src/index.html"),
@@ -77,7 +77,7 @@ module.exports = {
             loader: "file-loader",
             options: {
               name: "[name].[ext]",
-              outputPath: "static/",
+              outputPath: "assets/",
             },
           },
         ],
