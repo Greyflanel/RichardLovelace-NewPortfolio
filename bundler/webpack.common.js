@@ -5,10 +5,10 @@ const ImageminWebpWebpackPlugin = require("imagemin-webp-webpack-plugin");
 const path = require("path");
 
 module.exports = {
-  entry: {
-    index: "./src/index.js",
-    script: "./src/script.js"
-  },
+  entry: [
+    "./src/index.js",
+     "./src/script.js"
+  ],
   output: {
     filename: "bundler.[contenthash].js",
     path: path.resolve(__dirname, "../dist"),
@@ -71,7 +71,7 @@ module.exports = {
 
       // Images
       {
-        test: /\.(jpg|png|gif|svg|webp|mp4)$/,
+        test: /\.(jpg|png|gif|svg|webp|mp4|glb|gltf)$/,
         use: [
           {
             loader: "file-loader",
@@ -83,19 +83,7 @@ module.exports = {
         ],
       },
 
-      //   3D Model glb
-      {
-        test: /\.(glb|gltf)$/,
-        use: [
-          {
-            loader: "file-loader",
-            options: {
-              outputPath: "assets/",
-            },
-          },
-        ],
-      },
-
+      
       // Fonts
       {
         test: /\.(ttf|eot|woff|woff2)$/,
