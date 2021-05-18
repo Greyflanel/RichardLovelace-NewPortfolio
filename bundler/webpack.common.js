@@ -5,10 +5,10 @@ const ImageminWebpWebpackPlugin = require("imagemin-webp-webpack-plugin");
 const path = require("path");
 
 module.exports = {
-  entry: {
-    index: "./src/index.js",
-    script: "./src/script.js",
-  },
+  entry: [
+    "./src/index.js",
+    "./src/script.js",
+],
   output: {
     filename: "bundler.[contenthash].js",
     path: path.resolve(__dirname, "../dist"),
@@ -49,12 +49,6 @@ module.exports = {
         use: ["babel-loader"],
       },
 
-      // CSS
-      {
-        test: /\.css$/,
-        use: [MiniCSSExtractPlugin.loader, "css-loader"],
-        
-      },
       //   Sass/Scss
       {
         test: /\.s[ac]ss$/i,
@@ -70,42 +64,22 @@ module.exports = {
 
       // Images
       {
-        test: /\.(jpg|png|gif|svg|webp|mp4)$/,
+        test: /\.(jpg|png|gif|svg|webp|mp4|glb|gltf)$/,
         use: [
           {
             loader: "file-loader",
             options: {
               name: "[name].[ext]",
-              outputPath: "assets/",
+              outputPath: "/",
             },
           },
         ],
       },
 
-      //   3D Model glb
+      // CSS
       {
-        test: /\.(glb|gltf)$/,
-        use: [
-          {
-            loader: "file-loader",
-            options: {
-              outputPath: "assets/",
-            },
-          },
-        ],
-      },
-
-      // Fonts
-      {
-        test: /\.(ttf|eot|woff|woff2)$/,
-        use: [
-          {
-            loader: "file-loader",
-            options: {
-              outputPath: "assets/fonts/",
-            },
-          },
-        ],
+        test: /\.css$/,
+        use: [MiniCSSExtractPlugin.loader, "css-loader"],
       },
     ],
   },

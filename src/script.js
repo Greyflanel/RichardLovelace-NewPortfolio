@@ -1,6 +1,6 @@
-import "/css/main.css";
 import "./scroll";
 import "/static/star.png";
+import "./styles/style.css";
 import gsap from "gsap";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
@@ -218,7 +218,7 @@ controls.enableZoom = false;
 controls.autoRotateSpeed = 0.15;
 controls.enablePan = false;
 controls.update;
-console.log(controls)
+console.log(controls);
 /**
  * Renderer
  */
@@ -260,9 +260,6 @@ const tick = () => {
 
   // Update Orbital Controls
   controls.update();
-
-
-
 
   // Render
   renderer.render(scene, camera);

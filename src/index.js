@@ -1,6 +1,6 @@
 import gsap from "gsap";
-import "./styles/style.css";
 import "./nav";
+import "./styles/style.css";
 import "/static/black-clover-pub-video.mp4";
 import "/static/github.svg";
 import "/static/html-logo.png";
