@@ -16,13 +16,7 @@ module.exports = {
   },
   devtool: "source-map",
   plugins: [
-    new ImageminWebpWebpackPlugin({
-      detailedLogs: true,
-      overrideExtension: true,
-      silent: false,
-      strict: true,
-      quality: 75,
-    }),
+    
     new CopyWebpackPlugin({
       patterns: [{ from: path.resolve(__dirname, "../static/") }],
     }),
