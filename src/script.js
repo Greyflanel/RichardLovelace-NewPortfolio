@@ -1,5 +1,7 @@
 import "/css/main.css";
 import "./scroll";
+import myStar from "./static/star.webp";
+import myMoon from "./static/models/moon.glb";
 import gsap from "gsap";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
@@ -12,7 +14,7 @@ const loader = new GLTFLoader();
 
 const textureLoader = new THREE.TextureLoader();
 
-const star = textureLoader.load("./star.png");
+const star = textureLoader.load(myStar);
 
 // const normalTexture = textureLoader.load("");
 
@@ -63,9 +65,9 @@ scene.add(particlesMesh);
 
 // 3D Models
 
-let moon;
+let moon = myMoon;
 loader.load(
-  "/models/moon.glb",
+  moon,
   function (gltf) {
     moon = gltf.scene;
     moon.rotation.y = -0.3;

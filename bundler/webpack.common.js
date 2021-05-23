@@ -11,15 +11,13 @@ module.exports = {
   ],
   output: {
     filename: "bundler.[contenthash].js",
-    path: path.resolve(__dirname, "../dist"),
+    path: path.resolve(__dirname, "dist"),
     clean: true,
   },
   devtool: "source-map",
   plugins: [
     
-    new CopyWebpackPlugin({
-      patterns: [{ from: path.resolve(__dirname, "../static/") }],
-    }),
+    
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "../src/index.html"),
       minify: true,
