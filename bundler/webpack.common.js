@@ -23,7 +23,7 @@ module.exports = {
       quality: 75,
     }),
     new CopyWebpackPlugin({
-      patterns: [{ from: path.resolve(__dirname, "../static/") }],
+      patterns: [{ from: path.resolve(__dirname, "../src/static/") }],
     }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "../src/index.html"),
@@ -36,15 +36,9 @@ module.exports = {
   ],
   module: {
     rules: [
-      // HTML
-      {
-        test: /\.(html)$/,
-        use: ["html-loader"],
-      },
-
       // JS
       {
-        test: /\.js$/,
+        test: /\.js$/i,
         exclude: /node_modules/,
         use: ["babel-loader"],
       },
@@ -63,23 +57,40 @@ module.exports = {
       },
 
       // Images
-      {
-        test: /\.(jpg|png|gif|svg|webp|mp4|glb|gltf)$/,
+      /*{
+        test: /\.(jpg|png|gif|svg|webp|mp4|glb|gltf)$/i,
         use: [
           {
-            loader: "file-loader",
+            loader: 'url-loader',
             options: {
-              name: "[name].[ext]",
-              outputPath: "/",
+              limit: 8192,
             },
           },
-        ],
+        ]
+      },*/
+
+      {
+        test: /\.(png)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+            },
+          },
+        ]
       },
 
       // CSS
       {
-        test: /\.css$/,
+        test: /\.css$/i,
         use: [MiniCSSExtractPlugin.loader, "css-loader"],
+      },
+
+      // HTML
+      {
+        test: /\.(html)$/i,
+        use: ["html-loader"],
       },
     ],
   },

@@ -1,5 +1,5 @@
 import "./scroll";
-import "/static/star.png";
+import "./static/star.png";
 import "./styles/style.css";
 import gsap from "gsap";
 import * as THREE from "three";

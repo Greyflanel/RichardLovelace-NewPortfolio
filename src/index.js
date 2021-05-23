@@ -1,23 +1,23 @@
 import gsap from "gsap";
 import "./nav";
 import "./styles/style.css";
-import "/static/black-clover-pub-video.mp4";
-import "/static/github.svg";
-import "/static/html-logo.png";
-import "/static/css-logo.png";
-import "/static/js-logo.png";
-import "/static/react-logo.png";
-import "/static/gsap-logo.png";
-import "/static/node-logo.png";
-import "/static/knex-icon.png";
-import "/static/python-logo.png";
-import "/static/postgres-logo.png";
-import "/static/me.png";
-import "/static/linkedin.svg";
-import "/static/grape-smoke.mp4";
-import "/static/purpleborder.png";
-import "/static/new-logo-color.png";
-import "/static/richardlovelace-portfolio.mp4";
+/*import "./static/black-clover-pub-video.mp4";
+import "./static/github.svg";
+import "./static/html-logo.png";
+import "./static/css-logo.png";
+import "./static/js-logo.png";
+import "./static/react-logo.png";
+import "./static/gsap-logo.png";
+import "./static/node-logo.png";
+import "./static/knex-icon.png";
+import "./static/python-logo.png";
+import "./static/postgres-logo.png";
+import "./static/me.png";
+import "./static/linkedin.svg";
+import "./static/grape-smoke.mp4";
+import "./static/purpleborder.png";
+import "./static/new-logo-color.png";
+import "./static/richardlovelace-portfolio.mp4";*/
 
 
 var mqls = [
