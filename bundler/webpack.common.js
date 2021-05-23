@@ -5,10 +5,7 @@ const ImageminWebpWebpackPlugin = require("imagemin-webp-webpack-plugin");
 const path = require("path");
 
 module.exports = {
-  entry: [
-    "./src/index.js",
-    "./src/script.js",
-],
+  entry: "./src/index.js",
   output: {
     filename: "bundler.[contenthash].js",
     path: path.resolve(__dirname, "../dist"),
@@ -22,9 +19,7 @@ module.exports = {
       strict: true,
       quality: 75,
     }),
-    new CopyWebpackPlugin({
-      patterns: [{ from: path.resolve(__dirname, "../src/static/") }],
-    }),
+    
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "../src/index.html"),
       minify: true,
@@ -70,10 +65,10 @@ module.exports = {
       },*/
 
       {
-        test: /\.(png)$/i,
+        test: /\.(png|webp|mp4|svg)$/i,
         use: [
           {
-            loader: 'url-loader',
+            loader: 'file-loader',
             options: {
               limit: 8192,
             },
