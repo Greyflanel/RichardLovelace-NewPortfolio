@@ -5,19 +5,15 @@ const ImageminWebpWebpackPlugin = require("imagemin-webp-webpack-plugin");
 const path = require("path");
 
 module.exports = {
-  entry: [
-    "./src/index.js",
-     "./src/script.js"
-  ],
+  entry: ["./src/index.js", "./src/script.js"],
   output: {
     filename: "bundler.[contenthash].js",
-    path: path.resolve(__dirname, "../dist"),
+    path: path.resolve(__dirname, "./dist"),
     clean: true,
+    publicPath: "/",
   },
   devtool: "source-map",
   plugins: [
-    
-    
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "../src/index.html"),
       minify: true,
@@ -46,7 +42,6 @@ module.exports = {
       {
         test: /\.css$/,
         use: [MiniCSSExtractPlugin.loader, "css-loader"],
-        
       },
       //   Sass/Scss
       {
@@ -66,25 +61,10 @@ module.exports = {
         test: /\.(jpg|png|gif|svg|webp|mp4|glb|gltf)$/,
         use: [
           {
-            loader: "file-loader",
+            loader: "url-loader",
             options: {
               name: "[name].[ext]",
-              
-              
-            },
-          },
-        ],
-      },
-
-      
-      // Fonts
-      {
-        test: /\.(ttf|eot|woff|woff2)$/,
-        use: [
-          {
-            loader: "file-loader",
-            options: {
-              outputPath: "assets/fonts/",
+              limit: 800192,
             },
           },
         ],
