@@ -1090,7 +1090,8 @@ textarea {
 }
 
 input[type="text"] {
-  margin-top: 5%;
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
 }
 
 input[type="submit"] {
